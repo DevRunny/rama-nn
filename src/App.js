@@ -1,4 +1,5 @@
 import "./scss/App.scss";
+import "./scss/fonts.scss";
 import Header from "./components/Header";
 
 function App() {

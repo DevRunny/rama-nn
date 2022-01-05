@@ -1,1 +1,41 @@
 $buttons: linear-gradient(to right, #ff4307, #ff7448);
+
+nav {
+  display: flex;
+  justify-self: start;
+  flex-direction: row;
+  margin-left: 199px;
+  margin-top: 43px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #181818;
+      text-decoration: none;
+      padding: 15px;
+    }
+
+    a:hover {
+      border-radius: 10px;
+      color: #ffffff;
+      background: $buttons;
+    }
+
+    li {
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      text-transform: uppercase;
+      align-items: center;
+      list-style-type: none;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.logo {
+  width: 192px;
+}
