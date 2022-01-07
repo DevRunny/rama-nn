@@ -14,13 +14,17 @@ nav {
   margin-top: 43px;
 
   ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
 
     li {
+      position: relative;
+      display: inline-block;
       font-weight: 500;
       font-style: normal;
+      font-size: 16px;
       text-transform: uppercase;
       align-items: center;
       list-style-type: none;
@@ -46,15 +50,29 @@ nav {
     }
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
     padding-top: 20px;
     padding-right: 7px;
   }
 
   .logo-label {
+    display: table;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
     font-family: "Jockey One";
     font-size: 40px;
     color: #ff3d00;
+    cursor: pointer;
   }
 
   .nav-adress {
@@ -65,6 +83,16 @@ nav {
     height: 57px;
     background: #212121;
 
+    hr {
+      width: 24px;
+      height: 0px;
+      left: 1446px;
+      top: 60px;
+
+      border: 1px solid #4e4e4e;
+      transform: rotate(90deg);
+    }
+
     .mappoint {
       width: 19px;
       padding-left: 28px;
@@ -73,16 +101,6 @@ nav {
 
     .nav-adress__text {
       color: #fcfcfc;
-    }
-
-    .rectangle {
-      width: 24px;
-      height: 0px;
-      left: 1446px;
-      top: 60px;
-
-      border: 1px solid #4e4e4e;
-      transform: rotate(90deg);
     }
   }
 }

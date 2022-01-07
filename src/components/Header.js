@@ -4,8 +4,10 @@ import mappoint from "../images/mappoint.svg";
 const Header = () => (
   <header>
     <nav>
-      <img src={logo} className="nav-logo" alt="logo" />
-      <label className="logo-label">RAMA-NN</label>
+      <a className="nav-logo" href="/">
+        <img src={logo} className="logo" alt="logo" />
+        <label className="logo-label">RAMA-NN</label>
+      </a>
       <ul>
         <li>
           <a href="#">Область аккредитации</a>
@@ -26,7 +28,7 @@ const Header = () => (
       <div className="nav-adress">
         <img src={mappoint} className="mappoint" alt="mpoint" />
         <p className="nav-adress__text">Московское шоссе, 302а к1</p>
-        <div className="rectangle"></div>
+        <hr></hr>
         <p className="nav-adress__text">+7 (904) 399-14-50</p>
       </div>
     </nav>
