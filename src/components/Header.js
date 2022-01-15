@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg";
+import { links } from "../components/data";
+import { contacts } from "../components/data";
 import mappoint from "../images/mappoint.svg";
 import { RegButton } from "./RegButton";
 
@@ -13,28 +15,26 @@ export const Header = () => {
               <img src={logo} className="logo" alt="logo" />
               <label className="logo-label">RAMA-NN</label>
             </a>
-            <ul>
-              <li>
-                <a href="#">Область аккредитации</a>
-              </li>
-              <li>
-                <a href="#">Адрес ПТО</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-              <li>
-                <a href="#">Запись на ТО</a>
-              </li>
-              <li>
-                <a href="#">Аттестат</a>
-              </li>
-            </ul>
+            <div className="links-header">
+              {links.map((link) => {
+                return (
+                  <a href={link.url} key={link.id}>
+                    {link.text}
+                  </a>
+                );
+              })}
+            </div>
             <div className="navbar-adress">
               <img src={mappoint} className="mappoint" alt="mpoint" />
-              <p className="nav-adress__text">Московское шоссе, 302а к1</p>
-              <hr></hr>
-              <p className="nav-adress__text">+7 (904) 399-14-50</p>
+              {contacts.map((contact) => {
+                return (
+                  <p className={contact.class}>
+                    {contact.adress}
+                    <hr></hr>
+                    {contact.tel}
+                  </p>
+                );
+              })}
             </div>
           </nav>
         </div>

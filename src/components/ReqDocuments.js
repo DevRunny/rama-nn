@@ -4,7 +4,7 @@ import cert from "../images/cert.png";
 
 export const ReqDocuments = () => {
   return (
-    <div id="documents">
+    <section id="documents">
       <div className="container">
         <div className="required-documents">
           <h1>При себе необходимо иметь:</h1>
@@ -27,6 +27,6 @@ export const ReqDocuments = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -5,7 +5,7 @@ import truckIcon from "../images/truck.svg";
 
 export const ScopeOfAccreditation = () => {
   return (
-    <div id="categories">
+    <section id="categories">
       <div className="container">
         <div className="vehicle-categories">
           <h1>Область аккредитации</h1>
@@ -42,6 +42,6 @@ export const ScopeOfAccreditation = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
