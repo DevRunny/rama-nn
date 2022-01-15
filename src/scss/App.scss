@@ -1,25 +1,44 @@
 @import "variables";
 
 header {
-  margin: auto;
   width: 100%;
-  overflow: hidden;
 }
 
-#top {
-  background-image: url(../images/bg-header.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d4d4d4;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7448;
+  border-radius: 4px;
+  border: 1px solid #d4d4d4;
+
+  &:hover {
+    background: #ff4307;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 1385px;
 }
 
 .nav-section {
+  max-width: 1920px;
+  margin: auto;
   padding-top: 43px;
 
   nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: nowrap;
+    margin: auto;
 
     ul {
       display: flex;
@@ -27,13 +46,13 @@ header {
       li {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         white-space: nowrap;
         position: relative;
         font-weight: 500;
         font-style: normal;
         font-size: 16px;
         text-transform: uppercase;
-        align-items: center;
         list-style-type: none;
         margin: 0px;
 
@@ -107,7 +126,7 @@ header {
   .nav-logo {
     display: flex;
     align-items: center;
-    padding-left: 200px;
+    padding-left: 10.5%;
 
     .logo {
       padding-top: 20px;
@@ -127,16 +146,14 @@ header {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    width: 749px;
+    width: 765px;
     height: 57px;
     background: #212121;
 
     hr {
       width: 24px;
-      height: 0px;
       left: 1446px;
       top: 60px;
-
       border: 1px solid #4e4e4e;
       transform: rotate(90deg);
     }
@@ -154,8 +171,6 @@ header {
 .header-info {
   display: flex;
   flex-direction: column;
-  max-width: 1920px;
-  padding-left: 278px;
   padding-bottom: 220px;
   margin-left: auto;
   margin-right: auto;
@@ -196,38 +211,170 @@ header {
         padding-left: 10px;
       }
     }
-    .reg-button {
-      width: 279px;
-      height: 58px;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
+  }
+}
+
+.reg-button {
+  width: 279px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+
+  background: -webkit-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
+  background: -moz-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
+  background: -o-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
+  background: linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
+
+  -webkit-transition: background 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out;
+  -o-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+
+  &:hover {
+    background-position: 279px;
+  }
+}
+
+.required-documents {
+  padding-bottom: 90px;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 52px;
+    padding-bottom: 21px;
+    font-size: 25px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+
+  hr {
+    margin: auto;
+    margin-bottom: 25px;
+    width: 966px;
+    border: 1px solid #e6e6e6;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0px;
       text-align: center;
-      text-transform: uppercase;
-      color: #ffffff;
-      cursor: pointer;
 
-      background: -webkit-linear-gradient(
-        267.93deg,
-        #ff7448 0.57%,
-        #ff4307 100%
-      );
-      background: -moz-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
-      background: -o-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
-      background: linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
+      p {
+        font-size: 19px;
+      }
+    }
 
-      -webkit-transition: background 0.3s ease-out;
-      -moz-transition: background 0.3s ease-out;
-      -o-transition: background 0.3s ease-out;
-      transition: background 0.3s ease-out;
+    .passport {
+      height: 238px;
+    }
+
+    .cert {
+      width: 306px;
+    }
+  }
+}
+
+.vehicle-categories {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 25px;
+  text-align: center;
+  color: #f1f1f1;
+
+  h1 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    li {
+      width: 446px;
+      height: 314px;
+      margin-top: 28px;
+      margin-bottom: 65px;
+      padding: 10px;
+      padding-top: 38px;
+      border: 1px solid #545454;
+      box-sizing: border-box;
+      border-radius: 25px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
 
       &:hover {
-        background-position: 279px;
+        border: 1px solid #ffffff;
+      }
+
+      .category-icon {
+        // margin-top: 38px;
+        width: 90px;
+        height: 90px;
+        background: #f5f5f5;
+        border-radius: 21px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 42px;
+        text-align: center;
+        color: #f1f1f1;
+      }
+
+      hr {
+        margin: auto;
+        width: 32px;
+        height: 4px;
+        border: 0;
+        background: #ffa800;
+      }
+
+      h3 {
+        margin-top: 11px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
       }
     }
   }
+}
+
+#top {
+  background: url(../images/bg-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
 }
 
 #documents {
@@ -236,8 +383,9 @@ header {
   background-repeat: no-repeat;
 }
 
-.required-documents {
-  margin: auto;
-  width: 100%;
-  overflow: hidden;
+#categories {
+  background: #222222 url(../images/bg-categories.png);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
