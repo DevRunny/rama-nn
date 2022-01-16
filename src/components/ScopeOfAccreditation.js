@@ -1,7 +1,5 @@
 import React from "react";
-import motoIcon from "../images/moto.svg";
-import carIcon from "../images/car.svg";
-import truckIcon from "../images/truck.svg";
+import { categories } from "../components/data";
 
 export const ScopeOfAccreditation = () => {
   return (
@@ -11,34 +9,16 @@ export const ScopeOfAccreditation = () => {
           <h1>Область аккредитации</h1>
           <h3>Категории транспортных средств</h3>
           <ul>
-            <li>
-              <img src={motoIcon} className="category-icon" alt="motoIcon" />
-              <h1>L</h1>
-              <hr></hr>
-              <h3>
-                Мопеды, мотовелосипеды, мокики, мотоциклы, мотороллеры,
-                трициклы, квадрициклы.
-              </h3>
-            </li>
-            <li>
-              <img src={carIcon} className="category-icon" alt="motoIcon" />
-              <h1>M1</h1>
-              <hr></hr>
-              <h3>
-                Транспортные средства, используемые для перевозки пассажиров и
-                имеющие, помимо места водителя,не более восьми мест для сидения
-              </h3>
-            </li>
-            <li>
-              <img src={truckIcon} className="category-icon" alt="motoIcon" />
-              <h1>N1</h1>
-              <hr></hr>
-              <h3>
-                Транспортные средства, предназначенные для перевозки грузов,
-                имеющие технически допустимую максимальную массу не более 3,5
-                тонн.
-              </h3>
-            </li>
+            {categories.map((category) => {
+              return (
+                <li key={category.id}>
+                  {category.image}
+                  {category.header}
+                  {category.line}
+                  {category.text}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

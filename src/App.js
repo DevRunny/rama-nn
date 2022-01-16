@@ -3,6 +3,8 @@ import "./scss/fonts.scss";
 import { Header } from "./components/Header";
 import { ReqDocuments } from "./components/ReqDocuments";
 import { ScopeOfAccreditation } from "./components/ScopeOfAccreditation";
+import { Features } from "./components/Features";
+import MapYandex from "./components/MapYandex";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Header />
       <ReqDocuments />
       <ScopeOfAccreditation />
+      <Features />
+      <MapYandex />
     </div>
   );
 }

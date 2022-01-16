@@ -372,6 +372,125 @@ header {
   }
 }
 
+.features-list {
+  display: grid;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 105px 0px 105px 0px;
+    list-style-type: none;
+
+    li {
+      width: 560px;
+      height: 241px;
+      padding-top: 35px;
+      padding-left: 52px;
+      background: #ffffff;
+      border: 1px solid #ededed;
+      box-sizing: border-box;
+      border-radius: 16px;
+
+      &:not(:nth-child(even)) {
+        margin-right: 40px;
+      }
+
+      &:not(:nth-child(3)):not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      h1 {
+        padding: 10px 0px 10px 0px;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 28px;
+        color: #000000;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #717171;
+
+        a {
+          color: #717171;
+        }
+      }
+    }
+  }
+}
+
+.map-yandex {
+  width: 100%;
+  height: 825px;
+}
+
+.contacts-block {
+  position: relative;
+  top: 228px;
+  width: 401px;
+  height: 397px;
+  padding-top: 25px;
+  padding-left: 41px;
+  padding-right: 35px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  z-index: 5000;
+
+  .map-icon {
+    position: relative;
+    width: 77px;
+    height: 77px;
+    left: 286px;
+    top: 2px;
+  }
+
+  .contacts-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -65px;
+
+    h1 {
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #000000;
+    }
+
+    hr {
+      width: 308px;
+      height: 0px;
+      border: 1px solid #ebebeb;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+
+      &:not(:last-child) {
+        margin-top: 22px;
+      }
+
+      &:nth-child(6) {
+        margin-bottom: 16px;
+      }
+    }
+
+    span:nth-child(7) {
+      margin-bottom: 33px;
+    }
+  }
+}
+
 #top {
   background: url(../images/bg-header.png);
   background-size: cover;
@@ -388,6 +507,13 @@ header {
 #categories {
   background: #222222 url(../images/bg-categories.png);
   background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#features {
+  background: #c5c5c5 url(../images/bg-features.png);
+  background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
 }

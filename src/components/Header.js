@@ -1,49 +1,18 @@
 import React from "react";
-import logo from "../images/logo.svg";
-import { links } from "../components/data";
-import { contacts } from "../components/data";
-import mappoint from "../images/mappoint.svg";
+import { Navbar } from "./Navbar";
 import { RegButton } from "./RegButton";
 
 export const Header = () => {
   return (
     <header>
       <div id="top">
-        <div className="nav-section">
-          <nav>
-            <a className="nav-logo" href="/">
-              <img src={logo} className="logo" alt="logo" />
-              <label className="logo-label">RAMA-NN</label>
-            </a>
-            <div className="links-header">
-              {links.map((link) => {
-                return (
-                  <a href={link.url} key={link.id}>
-                    {link.text}
-                  </a>
-                );
-              })}
-            </div>
-            <div className="navbar-adress">
-              <img src={mappoint} className="mappoint" alt="mpoint" />
-              {contacts.map((contact) => {
-                return (
-                  <p className={contact.class}>
-                    {contact.adress}
-                    <hr></hr>
-                    {contact.tel}
-                  </p>
-                );
-              })}
-            </div>
-          </nav>
-        </div>
+        <Navbar />
         <div className="container">
           <div className="header-info">
             <div>
               <h1>
                 Пункт технического осмотра
-                <br></br>
+                <br />
                 ИП: Хафизов Рамиль Наилевич
               </h1>
               <h3>
