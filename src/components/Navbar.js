@@ -24,9 +24,9 @@ export const Navbar = () => {
           <img src={mappoint} className="mappoint" alt="mpoint" />
           {contacts.map((contact) => {
             return (
-              <span className={contact.class} key={contact.id.toString()}>
+              <span className={contact.class} key={contact.id}>
                 {contact.adress}
-                {contact.line}
+                <hr />
                 {contact.tel}
               </span>
             );

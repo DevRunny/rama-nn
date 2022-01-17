@@ -26,9 +26,9 @@ const coordinates = [
 function MapYandex() {
   return (
     <div className="map-yandex">
-      <div id="contacts">
+      <div id="adress-pto">
         <div className="container" style={{ height: 0 }}>
-          <div className="contacts-block">
+          <div id="contacts" className="contacts-block">
             <div className="contacts-info">
               <img src={mapIcon} className="map-icon" alt="map-icon" />
               <h1>Контакты</h1>
@@ -63,7 +63,8 @@ function MapYandex() {
                 iconContent: "Рамыч",
                 iconLayout: "default#image",
                 iconImageHref: mappoint,
-                iconImageSize: [23.09, 37.69],
+                iconImageSize: [43.09, 57.69],
+                iconImageOffset: [-20, -55],
                 hideIconOnBalloonOpen: false,
                 balloonOffset: [3, -40],
               }}

@@ -13,9 +13,9 @@ export const ScopeOfAccreditation = () => {
               return (
                 <li key={category.id}>
                   {category.image}
-                  {category.header}
-                  {category.line}
-                  {category.text}
+                  <h1>{category.header}</h1>
+                  <hr />
+                  <h3>{category.text}</h3>
                 </li>
               );
             })}
