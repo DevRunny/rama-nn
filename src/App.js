@@ -5,6 +5,8 @@ import { ReqDocuments } from "./components/ReqDocuments";
 import { ScopeOfAccreditation } from "./components/ScopeOfAccreditation";
 import { Features } from "./components/Features";
 import MapYandex from "./components/MapYandex";
+import { Accreditation } from "./components/Accreditation";
+import { ModalItem } from "./components/ModalItem";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <ScopeOfAccreditation />
       <Features />
       <MapYandex />
+      <Accreditation />
+      <ModalItem />
     </div>
   );
 }

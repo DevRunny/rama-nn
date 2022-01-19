@@ -1,6 +1,10 @@
 import motoIcon from "../images/icons/moto.svg";
 import carIcon from "../images/icons/car.svg";
 import truckIcon from "../images/icons/truck.svg";
+import doc1 from "../images/files/doc1.png";
+import doc2 from "../images/files/doc2.png";
+import doc3 from "../images/files/doc3.png";
+import doc4 from "../images/files/doc4.png";
 
 export const links = [
   {
@@ -57,5 +61,24 @@ export const categories = [
     image: <img src={truckIcon} className="category-icon" alt="truck-icon" />,
     header: "N1",
     text: "Транспортные средства, предназначенные для перевозки грузов, имеющие технически допустимую максимальную массу не более 3,5 тонн.",
+  },
+];
+
+export const documents = [
+  {
+    id: 1,
+    image: <img src={doc1} alt="doc1" />,
+  },
+  {
+    id: 2,
+    image: <img src={doc2} alt="doc2" />,
+  },
+  {
+    id: 3,
+    image: <img src={doc3} alt="doc3" />,
+  },
+  {
+    id: 4,
+    image: <img src={doc4} alt="doc4" />,
   },
 ];

@@ -110,6 +110,8 @@ header {
     padding-left: 10.5%;
 
     .logo {
+      max-width: 100%;
+      height: auto;
       padding-top: 20px;
       padding-right: 7px;
     }
@@ -439,7 +441,7 @@ header {
   background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 36px;
-  z-index: 5000;
+  z-index: 10;
 
   .map-icon {
     position: relative;
@@ -490,6 +492,64 @@ header {
   }
 }
 
+.doc-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 45px;
+  text-align: center;
+  color: #313131;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-bottom: 140px;
+
+    li {
+      border: 20px rgba(232, 232, 232, 0.5) solid;
+    }
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  hr {
+    margin: auto;
+    margin-bottom: 25px;
+    width: 966px;
+    border: 1px solid #e6e6e6;
+  }
+
+  img {
+    height: 380px;
+    box-shadow: 5px 5px 10px 1px #00000073;
+  }
+}
+
+#overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+
+  .modal-image {
+    height: 95%;
+  }
+}
+
 #top {
   background: url(../images/bg-header.png);
   background-size: cover;
@@ -515,4 +575,13 @@ header {
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#accreditations {
+  background: linear-gradient(
+    89.06deg,
+    #ffffff 0.77%,
+    rgba(255, 255, 255, 0.46875) 52.38%,
+    rgba(196, 196, 196, 0) 97.91%
+  );
 }
