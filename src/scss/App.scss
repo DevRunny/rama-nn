@@ -1,15 +1,28 @@
 @import "variables";
 
 header {
-  width: 100%;
+  // width: 100%;
+  margin: auto;
 }
 
 .container {
   margin: auto;
-  width: 1385px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: 768px) {
+    width: 740px;
+  }
+  @media (min-width: 992px) {
+    width: 960px;
+  }
+  @media (min-width: 1440px) {
+    width: 1440px;
+  }
 }
 
 .nav-section {
+  position: relative;
   max-width: 1920px;
   margin: auto;
   padding-top: 43px;
@@ -74,13 +87,13 @@ header {
 
           &:hover:after {
             z-index: -10;
-            animation: fill 0.5s forwards;
-            -webkit-animation: fill 0.5s forwards;
-            -moz-animation: fill 0.5s forwards;
+            animation: links-header 0.5s forwards;
+            -webkit-animation: links-header 0.5s forwards;
+            -moz-animation: links-header 0.5s forwards;
             opacity: 1;
           }
 
-          @keyframes fill {
+          @keyframes links-header {
             0% {
               width: 0%;
               height: 1px;
@@ -110,10 +123,8 @@ header {
     padding-left: 10.5%;
 
     .logo {
-      max-width: 100%;
-      height: auto;
-      padding-top: 20px;
-      padding-right: 7px;
+      margin-top: 20px;
+      margin-right: 7px;
     }
 
     .logo-label {
@@ -245,7 +256,7 @@ header {
   hr {
     margin: auto;
     margin-bottom: 25px;
-    width: 966px;
+    width: 75%;
     border: 1px solid #e6e6e6;
   }
 
@@ -523,7 +534,7 @@ header {
   hr {
     margin: auto;
     margin-bottom: 25px;
-    width: 966px;
+    width: 75%;
     border: 1px solid #e6e6e6;
   }
 
