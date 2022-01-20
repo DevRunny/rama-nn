@@ -1,13 +1,10 @@
 import React from "react";
 import { documents } from "../components/data";
+import { ModalItem } from "../components/ModalItem";
 
-export const Accreditation = () => {
-  const [openItem, setOpenItem] = React.useState(null);
-
-  // console.log("item", openItem);
-
+export const Accreditation = ({ setOpenItem }) => {
   return (
-    <section id="accreditations">
+    <section id="certificate">
       <div className="container">
         <div className="doc-list">
           <h1>Аттестат об аккредитации</h1>
@@ -15,10 +12,7 @@ export const Accreditation = () => {
           <ul>
             {documents.map((doc) => {
               return (
-                <li
-                  key={doc.id}
-                  onClick={() => setOpenItem(console.log("mem"))}
-                >
+                <li key={doc.id} onClick={() => setOpenItem(doc)}>
                   {doc.image}
                 </li>
               );
@@ -26,6 +20,7 @@ export const Accreditation = () => {
           </ul>
         </div>
       </div>
+      <ModalItem />
     </section>
   );
 };

@@ -1,3 +1,4 @@
+import React from "react";
 import "./scss/App.scss";
 import "./scss/fonts.scss";
 import { Header } from "./components/Header";
@@ -9,6 +10,8 @@ import { Accreditation } from "./components/Accreditation";
 import { ModalItem } from "./components/ModalItem";
 
 function App() {
+  const [openItem, setOpenItem] = React.useState(null);
+
   return (
     <div className="App">
       <Header />
@@ -16,8 +19,8 @@ function App() {
       <ScopeOfAccreditation />
       <Features />
       <MapYandex />
-      <Accreditation />
-      <ModalItem />
+      <Accreditation setOpenItem={setOpenItem} />
+      <ModalItem openItem={openItem} setOpenItem={setOpenItem} />
     </div>
   );
 }
