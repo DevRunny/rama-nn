@@ -34,10 +34,10 @@ export const links = [
   },
 ];
 
-export const contacts = [
+export const navbarInfo = [
   {
     id: 1,
-    class: "nav-adress__text",
+    class: "nav-info__text",
     adress: "Московское шоссе, 302а к1",
     tel: "+7 (904) 399-14-50",
   },

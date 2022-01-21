@@ -1,6 +1,6 @@
 import logo from "../images/icons/logo.svg";
 import { links } from "../components/data";
-import { contacts } from "../components/data";
+import { navbarInfo } from "../components/data";
 import mappoint from "../images/icons/mappoint.svg";
 
 export const Navbar = () => {
@@ -14,21 +14,28 @@ export const Navbar = () => {
         <div className="links-header">
           {links.map((link) => {
             return (
-              <a href={link.url} key={link.id}>
-                {link.text}
-              </a>
+              <li>
+                <a href={link.url} key={link.id}>
+                  {link.text}
+                </a>
+              </li>
             );
           })}
         </div>
-        <div className="navbar-adress">
+        <hr />
+        <div className="navbar-info">
           <img src={mappoint} className="mappoint" alt="mpoint" />
-          {contacts.map((contact) => {
+          {navbarInfo.map((info) => {
             return (
-              <span className={contact.class} key={contact.id}>
-                {contact.adress}
+              <div className="navbar-block__info">
+                <span className={info.class} key={info.id}>
+                  {info.adress}
+                </span>
                 <hr />
-                {contact.tel}
-              </span>
+                <span className={info.class} key={info.id}>
+                  {info.tel}
+                </span>
+              </div>
             );
           })}
         </div>
