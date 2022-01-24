@@ -1,11 +1,11 @@
 import React from "react";
-import closebtn from "../images/icons/closebtn.svg";
+import closeBtn from "../images/icons/closebtn.svg";
 
 export const ModalItem = ({ openItem, setOpenItem }) => {
   function closeModal(e) {
     if (e.target.id === "overlay") {
       setOpenItem(null);
-    } else if (e.target.id === "closeBtn") {
+    } else if (e.target.id === "modal__close-btn") {
       setOpenItem(null);
     }
   }
@@ -17,8 +17,8 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
       <div className="modal-image">
         {openItem.image}
         <img
-          id="closeBtn"
-          src={closebtn}
+          id="modal__close-btn"
+          src={closeBtn}
           alt="close-btn"
           onClick={closeModal}
         />

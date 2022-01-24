@@ -20,6 +20,19 @@ header {
   }
 }
 
+.logo {
+  margin-top: 20px;
+  margin-right: 7px;
+}
+
+.logo-label {
+  white-space: nowrap;
+  font-family: "Jockey One";
+  font-size: 40px;
+  color: #ff3d00;
+  cursor: pointer;
+}
+
 .nav-section {
   max-width: 1920px;
   margin: auto;
@@ -124,10 +137,6 @@ header {
           a {
             color: #ffffff;
             height: 49px;
-
-            &:hover:after {
-              display: none;
-            }
           }
         }
       }
@@ -161,19 +170,6 @@ header {
     align-items: center;
     margin-left: 10.5%;
     text-decoration: none;
-
-    .logo {
-      margin-top: 20px;
-      margin-right: 7px;
-    }
-
-    .logo-label {
-      white-space: nowrap;
-      font-family: "Jockey One";
-      font-size: 40px;
-      color: #ff3d00;
-      cursor: pointer;
-    }
   }
 
   .navbar-info {
@@ -479,7 +475,7 @@ header {
 }
 
 .features-list {
-  display: grid;
+  display: flex;
   justify-content: center;
 
   ul {
@@ -606,14 +602,12 @@ header {
 
   ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
     margin-top: 30px;
     margin-bottom: 140px;
 
     li {
-      border: 20px rgba(232, 232, 232, 0.5) solid;
+      flex: 0 0 25%;
+      list-style-type: none;
     }
   }
 
@@ -654,11 +648,11 @@ header {
     box-shadow: 10px 5px 15px 1px rgba(0, 0, 0, 0.5);
   }
 
-  #closeBtn {
+  #modal__close-btn {
     position: absolute;
     right: 0;
     height: 4%;
-    border-radius: 30px;
+    border-radius: 50%;
     background: #fff;
     cursor: pointer;
     z-index: 25;
@@ -725,4 +719,8 @@ header {
     rgba(255, 255, 255, 0.46875) 52.38%,
     rgba(196, 196, 196, 0) 97.91%
   );
+}
+
+#footer {
+  background: #212121;
 }

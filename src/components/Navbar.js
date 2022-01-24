@@ -5,7 +5,7 @@ import mappoint from "../images/icons/mappoint.svg";
 
 export const Navbar = () => {
   return (
-    <div className="nav-section">
+    <section className="nav-section">
       <nav>
         <a className="nav-logo" href="/">
           <img src={logo} className="logo" alt="logo" />
@@ -14,10 +14,8 @@ export const Navbar = () => {
         <div className="links-header">
           {links.map((link) => {
             return (
-              <li>
-                <a href={link.url} key={link.id}>
-                  {link.text}
-                </a>
+              <li key={link.id}>
+                <a href={link.url}>{link.text}</a>
               </li>
             );
           })}
@@ -28,11 +26,11 @@ export const Navbar = () => {
           {navbarInfo.map((info) => {
             return (
               <div className="navbar-block__info">
-                <span className={info.class} key={info.id}>
+                <span key={info.adress} className={info.class}>
                   {info.adress}
                 </span>
                 <hr />
-                <span className={info.class} key={info.id}>
+                <span key={info.tel} className={info.class}>
                   {info.tel}
                 </span>
               </div>
@@ -40,6 +38,6 @@ export const Navbar = () => {
           })}
         </div>
       </nav>
-    </div>
+    </section>
   );
 };

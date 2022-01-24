@@ -7,6 +7,7 @@ import { ScopeOfAccreditation } from "./components/ScopeOfAccreditation";
 import { Features } from "./components/Features";
 import MapYandex from "./components/MapYandex";
 import { Accreditation } from "./components/Accreditation";
+import { Footer } from "./components/Footer";
 import { ModalItem } from "./components/ModalItem";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <MapYandex />
       <Accreditation setOpenItem={setOpenItem} />
       <ModalItem openItem={openItem} setOpenItem={setOpenItem} />
+      <Footer />
     </div>
   );
 }
