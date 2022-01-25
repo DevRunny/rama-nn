@@ -26,7 +26,7 @@ export const Footer = () => {
                 <a href="#adress-pto">Контакты</a>
               </li>
               <li>
-                <a href="#certificate">Аттестаты</a>
+                <a href="#certificate">Аттестат</a>
               </li>
             </div>
             <div className="footer__info">

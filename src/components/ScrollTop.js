@@ -20,7 +20,7 @@ export const ScrollTop = ({ visible, setVisible }) => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <div>
+    <>
       <button
         className="scroll-to-top"
         onClick={scrollToTop}
@@ -28,6 +28,6 @@ export const ScrollTop = ({ visible, setVisible }) => {
       >
         <i className="arrow-up" />
       </button>
-    </div>
+    </>
   );
 };

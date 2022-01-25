@@ -1,6 +1,7 @@
 import React from "react";
 import { documents } from "../components/data";
 import { ModalItem } from "../components/ModalItem";
+import footerCar from "../images/icons/footercar.svg";
 
 export const Accreditation = ({ setOpenItem }) => {
   return (
@@ -20,6 +21,7 @@ export const Accreditation = ({ setOpenItem }) => {
           </ul>
         </div>
       </div>
+      <img src={footerCar} className="footer__car-icon" alt="" />
       <ModalItem />
     </section>
   );

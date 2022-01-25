@@ -75,7 +75,6 @@ header {
   font-family: "Jockey One";
   font-size: 40px;
   color: #ff3d00;
-  cursor: pointer;
 }
 
 .nav-section {
@@ -215,6 +214,7 @@ header {
     align-items: center;
     margin-left: 10.5%;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .navbar-info {
@@ -415,7 +415,8 @@ header {
   color: #f1f1f1;
 
   h1 {
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 40px;
     line-height: 48px;
@@ -649,80 +650,88 @@ header {
   }
 }
 
+.footer__car-icon {
+  position: relative;
+  bottom: 120px;
+  right: 125px;
+  float: right;
+  width: 351px;
+}
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
 
-.footer__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-}
-
-.footer__links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-  font-size: 18px;
-
-  li:first-child {
-    list-style-type: none;
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
   }
 
-  li {
-    list-style-position: inside;
-    padding-left: 16px;
+  .footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 18px;
 
-    a {
-      color: $fontColorWhite;
-      text-decoration: none;
+    li:first-child {
+      list-style-type: none;
+    }
+
+    li {
+      list-style-position: inside;
+      padding-left: 16px;
+
+      a {
+        color: $fontColorWhite;
+        text-decoration: none;
+      }
+    }
+
+    ::marker {
+      color: #e14132;
+      font-size: 16px;
     }
   }
 
-  ::marker {
-    color: #e14132;
-    font-size: 16px;
+  .footer__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $fontColorWhite;
+    padding-bottom: 20px;
+
+    span:first-child {
+      font-size: 14px;
+    }
+
+    span:last-child {
+      font-size: 18px;
+    }
+
+    hr {
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 24px;
+      border: 1px solid #4e4e4e;
+      transform: rotate(90deg);
+    }
   }
-}
 
-.footer__info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $fontColorWhite;
-  padding-bottom: 20px;
-
-  span:first-child {
-    font-size: 14px;
+  .footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: $fontSize12;
+    color: $fontColorWhite;
+    line-height: 20px;
+    padding-bottom: 20px;
   }
-
-  span:last-child {
-    font-size: 18px;
-  }
-
-  hr {
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 24px;
-    border: 1px solid #4e4e4e;
-    transform: rotate(90deg);
-  }
-}
-
-.footer__copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: $fontSize12;
-  color: $fontColorWhite;
-  line-height: 20px;
-  padding-bottom: 20px;
 }
 
 .modal-image {
