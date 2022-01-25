@@ -54,24 +54,32 @@ function MapYandex() {
           width="100%"
           defaultState={mapData}
           query={{ lang: "en_RU" }}
+          instanceRef={(ref) => {
+            ref && ref.behaviors.disable("scrollZoom");
+          }}
         >
           {coordinates.map((coordinate) => (
             <Placemark
               key={coordinate.id}
               geometry={coordinate.coordinate}
               options={{
-                iconContent: "Рамыч",
                 iconLayout: "default#image",
                 iconImageHref: mappoint,
                 iconImageSize: [43.09, 57.69],
                 iconImageOffset: [-20, -55],
-                hideIconOnBalloonOpen: false,
                 balloonOffset: [3, -40],
+                hideIconOnBalloonOpen: true,
+                openBalloonOnClick: true,
               }}
             />
           ))}
           <TrafficControl options={{ float: "right" }} />
-          <ZoomControl options={{ float: "left" }} />
+          <ZoomControl
+            options={{
+              size: "auto",
+              position: { top: 300, bottom: "auto", left: "auto", right: 10 },
+            }}
+          />
           <TypeSelector options={{ float: "right" }} />
         </Map>
       </YMaps>

@@ -23,19 +23,12 @@ export const Navbar = () => {
         <hr />
         <div className="navbar-info">
           <img src={mappoint} className="mappoint" alt="mpoint" />
-          {navbarInfo.map((info) => {
-            return (
-              <div className="navbar-block__info">
-                <span key={info.adress} className={info.class}>
-                  {info.adress}
-                </span>
-                <hr />
-                <span key={info.tel} className={info.class}>
-                  {info.tel}
-                </span>
-              </div>
-            );
-          })}
+
+          <div className="navbar-block__info">
+            <span className={navbarInfo.classHeader}>{navbarInfo.adress}</span>
+            <hr />
+            <span className={navbarInfo.classHeader}>{navbarInfo.tel}</span>
+          </div>
         </div>
       </nav>
     </section>

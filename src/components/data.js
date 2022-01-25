@@ -6,6 +6,13 @@ import doc2 from "../images/files/doc2.png";
 import doc3 from "../images/files/doc3.png";
 import doc4 from "../images/files/doc4.png";
 
+export const navbarInfo = {
+  classHeader: "nav-info__text",
+  classFooter: "nav-info__text",
+  adress: "Московское шоссе, 302а к1",
+  tel: "+7 (904) 399-14-50",
+};
+
 export const links = [
   {
     id: 1,
@@ -31,15 +38,6 @@ export const links = [
     id: 5,
     text: "Аттестат",
     url: "#certificate",
-  },
-];
-
-export const navbarInfo = [
-  {
-    id: 1,
-    class: "nav-info__text",
-    adress: "Московское шоссе, 302а к1",
-    tel: "+7 (904) 399-14-50",
   },
 ];
 
