@@ -11,7 +11,7 @@ export const Navbar = () => {
           <img src={logo} className="logo" alt="logo" />
           <label className="logo-label">RAMA-NN</label>
         </a>
-        <div className="links-header">
+        <div className="header__links">
           {links.map((link) => {
             return (
               <li key={link.id}>

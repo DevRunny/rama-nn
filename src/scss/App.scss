@@ -20,6 +20,26 @@ header {
   }
 }
 
+button {
+  width: 279px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  background: $btnColor;
+  transition: background 0.3s ease-out;
+
+  &:hover {
+    background-position: 279px;
+  }
+}
+
 .logo {
   margin-top: 20px;
   margin-right: 7px;
@@ -48,7 +68,7 @@ header {
     justify-content: space-between;
     margin: auto;
 
-    .links-header {
+    .header__links {
       display: flex;
 
       li {
@@ -100,13 +120,13 @@ header {
 
             &:hover:after {
               z-index: -10;
-              animation: links-header 0.5s forwards;
-              -webkit-animation: links-header 0.5s forwards;
-              -moz-animation: links-header 0.5s forwards;
+              animation: header__links 0.5s forwards;
+              -webkit-animation: header__links 0.5s forwards;
+              -moz-animation: header__links 0.5s forwards;
               opacity: 1;
             }
 
-            @keyframes links-header {
+            @keyframes header__links {
               0% {
                 width: 0%;
                 height: 1px;
@@ -298,34 +318,6 @@ header {
 
   @media (max-width: 1600px) {
     padding-bottom: 55px;
-  }
-}
-
-.reg-button {
-  width: 279px;
-  height: 58px;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  cursor: pointer;
-
-  background: -webkit-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
-  background: -moz-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
-  background: -o-linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
-  background: linear-gradient(267.93deg, #ff7448 0.57%, #ff4307 100%);
-
-  -webkit-transition: background 0.3s ease-out;
-  -moz-transition: background 0.3s ease-out;
-  -o-transition: background 0.3s ease-out;
-  transition: background 0.3s ease-out;
-
-  &:hover {
-    background-position: 279px;
   }
 }
 
