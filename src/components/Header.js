@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "./Navbar";
+import { information } from "./data";
 import { RegButton } from "./RegButton";
 
 export const Header = () => {
@@ -13,10 +14,11 @@ export const Header = () => {
               <h1>
                 Пункт технического осмотра
                 <br />
-                ИП: Хафизов Рамиль Наилевич
+                ИП: {information.name}
               </h1>
               <h3>
-                Номер в реестре операторов технического осмотра РСА: 01234
+                Номер в реестре операторов технического осмотра РСА:{" "}
+                {information.numberRSA}
               </h3>
               <table className="requisites">
                 <tbody>
@@ -24,13 +26,13 @@ export const Header = () => {
                     <td>
                       <span>ИНН:</span>
                     </td>
-                    <td>260505110827</td>
+                    <td>{information.inn}</td>
                   </tr>
                   <tr>
                     <td>
                       <span>ОГРН:</span>
                     </td>
-                    <td>307264213100022</td>
+                    <td>{information.ogrn}</td>
                   </tr>
                 </tbody>
               </table>

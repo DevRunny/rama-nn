@@ -9,9 +9,11 @@ import MapYandex from "./components/MapYandex";
 import { Accreditation } from "./components/Accreditation";
 import { Footer } from "./components/Footer";
 import { ModalItem } from "./components/ModalItem";
+import { ScrollTop } from "./components/ScrollTop";
 
 function App() {
   const [openItem, setOpenItem] = React.useState(null);
+  const [visible, setVisible] = React.useState(false);
 
   return (
     <div className="App">
@@ -21,8 +23,9 @@ function App() {
       <Features />
       <MapYandex />
       <Accreditation setOpenItem={setOpenItem} />
-      <ModalItem openItem={openItem} setOpenItem={setOpenItem} />
       <Footer />
+      <ModalItem openItem={openItem} setOpenItem={setOpenItem} />
+      <ScrollTop visible={visible} setVisible={setVisible} />
     </div>
   );
 }

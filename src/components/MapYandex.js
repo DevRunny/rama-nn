@@ -1,4 +1,5 @@
 import React from "react";
+import { information } from "./data";
 import mapIcon from "../images/icons/mapicon.svg";
 import mappoint from "../images/icons/mappoint.svg";
 import {
@@ -32,13 +33,10 @@ function MapYandex() {
             <div className="contacts-info">
               <img src={mapIcon} className="map-icon" alt="map-icon" />
               <h1>Контакты</h1>
-              <span>
-                603092, Нижегородская область, <br />
-                г. Нижний Новгород, Московское шоссе, 302а к1
-              </span>
+              <span>{information.fullAdress}</span>
               <hr />
-              <a href="tel:+79043991450">+7 (904) 399-14-50</a>
-              <a href="mailto:rama-nn@mail.ru">rama-nn@mail.ru</a>
+              <a href="tel:+79043991450">{information.tel}</a>
+              <a href={information.hrefEmail}>{information.email}</a>
               <span>
                 Режим работы с 9:00 до 18:00 <br />
                 Без выходных

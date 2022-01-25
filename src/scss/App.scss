@@ -20,7 +20,32 @@ header {
   }
 }
 
-button {
+.scroll-to-top {
+  position: fixed;
+  left: auto;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #4242426e;
+  color: #ffffff;
+  z-index: 1000;
+
+  .arrow-up {
+    border: solid #ffffff;
+    border-width: 0 6px 6px 0;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+}
+
+.reg-button {
   width: 279px;
   height: 58px;
   border: none;
@@ -200,7 +225,7 @@ button {
     height: 57px;
     background: #212121;
 
-    .navbar-block__info {
+    .navbar__info {
       display: flex;
       justify-content: flex-start;
       align-items: baseline;
@@ -246,7 +271,7 @@ button {
     }
 
     .navbar-info {
-      .navbar-block__info {
+      .navbar__info {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
@@ -548,6 +573,7 @@ button {
     flex-direction: column;
     position: relative;
     top: -65px;
+    width: 270px;
 
     h1 {
       padding-bottom: 20px;
@@ -621,6 +647,82 @@ button {
     height: 380px;
     box-shadow: 5px 5px 10px 1px #00000073;
   }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 18px;
+
+  li:first-child {
+    list-style-type: none;
+  }
+
+  li {
+    list-style-position: inside;
+    padding-left: 16px;
+
+    a {
+      color: $fontColorWhite;
+      text-decoration: none;
+    }
+  }
+
+  ::marker {
+    color: #e14132;
+    font-size: 16px;
+  }
+}
+
+.footer__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $fontColorWhite;
+  padding-bottom: 20px;
+
+  span:first-child {
+    font-size: 14px;
+  }
+
+  span:last-child {
+    font-size: 18px;
+  }
+
+  hr {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 24px;
+    border: 1px solid #4e4e4e;
+    transform: rotate(90deg);
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: $fontSize12;
+  color: $fontColorWhite;
+  line-height: 20px;
+  padding-bottom: 20px;
 }
 
 .modal-image {

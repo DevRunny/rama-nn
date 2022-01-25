@@ -6,11 +6,19 @@ import doc2 from "../images/files/doc2.png";
 import doc3 from "../images/files/doc3.png";
 import doc4 from "../images/files/doc4.png";
 
-export const navbarInfo = {
+export const information = {
+  inn: "260505110827",
+  ogrn: "307264213100022",
+  numberRSA: "01234",
+  name: "Хафизов Рамиль Наилевич",
   classHeader: "nav-info__text",
   classFooter: "nav-info__text",
   adress: "Московское шоссе, 302а к1",
+  fullAdress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а к1`,
   tel: "+7 (904) 399-14-50",
+  email: "rama-nn@mail.ru",
+  hrefEmail: "mailto:rama-nn@mail.ru",
+  label: "RAMA-NN",
 };
 
 export const links = [
