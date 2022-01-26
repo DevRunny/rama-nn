@@ -77,7 +77,11 @@ header {
   color: #ff3d00;
 }
 
-.nav-section {
+.mappoint {
+  padding: 14px 18px 14px 32px;
+}
+
+.navbar {
   max-width: 1920px;
   margin: auto;
   padding-top: 43px;
@@ -92,7 +96,7 @@ header {
     justify-content: space-between;
     margin: auto;
 
-    .header__links {
+    .navbar__links {
       display: flex;
 
       li {
@@ -209,7 +213,7 @@ header {
     }
   }
 
-  .nav-logo {
+  .navbar__logo {
     display: flex;
     align-items: center;
     margin-left: 10.5%;
@@ -217,7 +221,7 @@ header {
     cursor: pointer;
   }
 
-  .navbar-info {
+  .navbar__info {
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -225,30 +229,20 @@ header {
     height: 57px;
     background: #212121;
 
-    .navbar__info {
+    .navbar__contacts {
       display: flex;
       justify-content: flex-start;
-      align-items: baseline;
+      align-items: center;
       flex-direction: row;
+      color: #fcfcfc;
     }
 
     hr {
       display: block;
       width: 24px;
-      left: 1446px;
       top: 60px;
       border: 1px solid #4e4e4e;
       transform: rotate(90deg);
-    }
-
-    .mappoint {
-      padding: 14px 18px 14px 32px;
-    }
-
-    .nav-info__text {
-      display: flex;
-      align-items: center;
-      color: #fcfcfc;
     }
   }
 
@@ -266,12 +260,12 @@ header {
       transform: rotate(0deg);
     }
 
-    .nav-logo {
+    .navbar__logo {
       margin-left: 5px;
     }
 
-    .navbar-info {
-      .navbar__info {
+    .navbar__info {
+      .navbar__contacts {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
@@ -288,15 +282,11 @@ header {
       .mappoint {
         padding: 14px 14px 14px 14px;
       }
-
-      .nav-info__text {
-        padding-right: 5px;
-      }
     }
   }
 }
 
-.header-info {
+.header__info {
   display: flex;
   flex-direction: column;
   padding-bottom: 220px;
@@ -325,7 +315,7 @@ header {
       line-height: 29px;
     }
 
-    .requisites {
+    .header__requisites {
       font-weight: 300;
       font-size: 20.5px;
       line-height: 29px;
@@ -346,7 +336,7 @@ header {
   }
 }
 
-.required-documents {
+.documents {
   padding-bottom: 90px;
 
   h1 {
@@ -384,7 +374,7 @@ header {
       }
     }
 
-    .passport {
+    .documents__passport {
       padding-bottom: 10px;
       width: 168px;
       transition: 1s;
@@ -394,7 +384,7 @@ header {
       }
     }
 
-    .cert {
+    .documents__cert {
       padding-bottom: 10px;
       width: 312px;
       transition: 1s;
@@ -458,7 +448,7 @@ header {
       }
     }
 
-    .category-icon {
+    .vehicle-categories__icons {
       width: 90px;
       height: 90px;
       background: #f5f5f5;
@@ -542,12 +532,20 @@ header {
   }
 }
 
-.map-yandex {
-  width: 100%;
-  height: 825px;
+.adress-pto {
+  height: 0;
 }
 
-.contacts-block {
+.map-yandex {
+  width: 100%;
+  height: 850px;
+
+  // @media (max-width: 768px) {
+  //   height: 274px;
+  // }
+}
+
+.contacts {
   position: relative;
   top: 228px;
   width: 401px;
@@ -561,7 +559,7 @@ header {
   border-radius: 36px;
   z-index: 10;
 
-  .map-icon {
+  .contacts__map-icon {
     position: relative;
     width: 77px;
     height: 77px;
@@ -569,7 +567,7 @@ header {
     top: 2px;
   }
 
-  .contacts-info {
+  .contacts__info {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -611,7 +609,7 @@ header {
   }
 }
 
-.doc-list {
+.certificate {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -648,14 +646,6 @@ header {
     height: 380px;
     box-shadow: 5px 5px 10px 1px #00000073;
   }
-}
-
-.footer__car-icon {
-  position: relative;
-  bottom: 120px;
-  right: 125px;
-  float: right;
-  width: 351px;
 }
 
 .footer {
@@ -732,6 +722,14 @@ header {
     line-height: 20px;
     padding-bottom: 20px;
   }
+}
+
+.footer__car-icon {
+  position: relative;
+  bottom: 110px;
+  right: 125px;
+  float: right;
+  width: 351px;
 }
 
 .modal-image {

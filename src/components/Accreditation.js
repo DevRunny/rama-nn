@@ -1,13 +1,12 @@
 import React from "react";
 import { documents } from "../components/data";
 import { ModalItem } from "../components/ModalItem";
-import footerCar from "../images/icons/footercar.svg";
 
 export const Accreditation = ({ setOpenItem }) => {
   return (
     <section id="certificate">
       <div className="container">
-        <div className="doc-list">
+        <div className="certificate">
           <h1>Аттестат об аккредитации</h1>
           <hr />
           <ul>
@@ -21,7 +20,7 @@ export const Accreditation = ({ setOpenItem }) => {
           </ul>
         </div>
       </div>
-      <img src={footerCar} className="footer__car-icon" alt="" />
+
       <ModalItem />
     </section>
   );

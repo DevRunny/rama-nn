@@ -5,13 +5,13 @@ import mappoint from "../images/icons/mappoint.svg";
 
 export const Navbar = () => {
   return (
-    <section className="nav-section">
+    <section className="navbar">
       <nav>
-        <a className="nav-logo" href="/">
+        <a className="navbar__logo" href="/">
           <img src={logo} className="logo" alt="logo" />
           <label className="logo-label">{information.label}</label>
         </a>
-        <div className="header__links">
+        <div className="navbar__links">
           {links.map((link) => {
             return (
               <li key={link.id}>
@@ -21,15 +21,12 @@ export const Navbar = () => {
           })}
         </div>
         <hr />
-        <div className="navbar-info">
+        <div className="navbar__info">
           <img src={mappoint} className="mappoint" alt="mpoint" />
-
-          <div className="navbar__info">
-            <span className={information.classHeader}>
-              {information.adress}
-            </span>
+          <div className="navbar__contacts">
+            <span>{information.adress}</span>
             <hr />
-            <span className={information.classHeader}>{information.tel}</span>
+            <span>{information.tel}</span>
           </div>
         </div>
       </nav>

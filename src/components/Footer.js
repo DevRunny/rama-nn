@@ -1,10 +1,12 @@
 import React from "react";
 import { information } from "../components/data";
 import logo from "../images/icons/logo.svg";
+import footerCar from "../images/icons/footercar.svg";
 
 export const Footer = () => {
   return (
     <footer>
+      <img src={footerCar} className="footer__car-icon" alt="" />
       <div id="footer">
         <div className="container">
           <div className="footer">

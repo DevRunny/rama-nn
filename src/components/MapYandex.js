@@ -28,10 +28,14 @@ function MapYandex() {
   return (
     <div className="map-yandex">
       <div id="adress-pto">
-        <div className="container" style={{ height: 0 }}>
-          <div id="contacts" className="contacts-block">
-            <div className="contacts-info">
-              <img src={mapIcon} className="map-icon" alt="map-icon" />
+        <div className="container adress-pto">
+          <div id="contacts" className="contacts">
+            <div className="contacts__info">
+              <img
+                src={mapIcon}
+                className="contacts__map-icon"
+                alt="contacts__map-icon"
+              />
               <h1>Контакты</h1>
               <span>{information.fullAdress}</span>
               <hr />
@@ -48,8 +52,7 @@ function MapYandex() {
       </div>
       <YMaps>
         <Map
-          height="100%"
-          width="100%"
+          className="map-yandex"
           defaultState={mapData}
           query={{ lang: "en_RU" }}
           instanceRef={(ref) => {

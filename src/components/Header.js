@@ -9,7 +9,7 @@ export const Header = () => {
       <div id="top">
         <Navbar />
         <div className="container">
-          <div className="header-info">
+          <div className="header__info">
             <div>
               <h1>
                 Пункт технического осмотра
@@ -20,7 +20,7 @@ export const Header = () => {
                 Номер в реестре операторов технического осмотра РСА:{" "}
                 {information.numberRSA}
               </h3>
-              <table className="requisites">
+              <table className="header__requisites">
                 <tbody>
                   <tr>
                     <td>

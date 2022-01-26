@@ -11,8 +11,6 @@ export const information = {
   ogrn: "307264213100022",
   numberRSA: "01234",
   name: "Хафизов Рамиль Наилевич",
-  classHeader: "nav-info__text",
-  classFooter: "nav-info__text",
   adress: "Московское шоссе, 302а к1",
   fullAdress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а к1`,
   tel: "+7 (904) 399-14-50",
@@ -52,19 +50,33 @@ export const links = [
 export const categories = [
   {
     id: 1,
-    image: <img src={motoIcon} className="category-icon" alt="moto-icon" />,
+    image: (
+      <img
+        src={motoIcon}
+        className="vehicle-categories__icons"
+        alt="moto-icon"
+      />
+    ),
     header: "L",
     text: "Мопеды, мотовелосипеды, мокики, мотоциклы, мотороллеры, трициклы, квадрициклы.",
   },
   {
     id: 2,
-    image: <img src={carIcon} className="category-icon" alt="car-icon" />,
+    image: (
+      <img src={carIcon} className="vehicle-categories__icons" alt="car-icon" />
+    ),
     header: "M1",
     text: "Транспортные средства, используемые для перевозки пассажиров и имеющие,помимо места водителя,не более восьми мест для сидения",
   },
   {
     id: 3,
-    image: <img src={truckIcon} className="category-icon" alt="truck-icon" />,
+    image: (
+      <img
+        src={truckIcon}
+        className="vehicle-categories__icons"
+        alt="truck-icon"
+      />
+    ),
     header: "N1",
     text: "Транспортные средства, предназначенные для перевозки грузов, имеющие технически допустимую максимальную массу не более 3,5 тонн.",
   },
