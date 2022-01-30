@@ -1,6 +1,6 @@
 import React from "react";
-import { documents } from "../components/data";
-import { ModalItem } from "../components/ModalItem";
+import { documents } from "./data";
+import { ModalItem } from "./ModalItem";
 
 export const Accreditation = ({ setOpenItem }) => {
   return (

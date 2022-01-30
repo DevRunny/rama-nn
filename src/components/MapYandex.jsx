@@ -39,7 +39,7 @@ function MapYandex() {
               <h1>Контакты</h1>
               <span>{information.fullAdress}</span>
               <hr />
-              <a href="tel:+79043991450">{information.tel}</a>
+              <a href={information.hrefTel}>{information.tel}</a>
               <a href={information.hrefEmail}>{information.email}</a>
               <span>
                 Режим работы с 9:00 до 18:00 <br />

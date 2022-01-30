@@ -1,5 +1,5 @@
 import React from "react";
-import { categories } from "../components/data";
+import { categories } from "./data";
 
 export const ScopeOfAccreditation = () => {
   return (

@@ -14,6 +14,7 @@ export const information = {
   adress: "Московское шоссе, 302а к1",
   fullAdress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а к1`,
   tel: "+7 (904) 399-14-50",
+  hrefTel: "tel:+79043991450",
   email: "rama-nn@mail.ru",
   hrefEmail: "mailto:rama-nn@mail.ru",
   label: "RAMA-NN",

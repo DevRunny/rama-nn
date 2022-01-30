@@ -1,5 +1,6 @@
 import React from "react";
 import closeBtn from "../images/icons/closebtn.svg";
+import { SendForm } from "./SendForm";
 
 export const ModalItem = ({ openItem, setOpenItem }) => {
   function closeModal(e) {
@@ -14,6 +15,7 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
 
   return (
     <div id="overlay" onClick={closeModal}>
+      <SendForm />
       <div className="modal-image">
         {openItem.image}
         <img

@@ -1,6 +1,6 @@
 import logo from "../images/icons/logo.svg";
-import { links } from "../components/data";
-import { information } from "../components/data";
+import { links } from "./data";
+import { information } from "./data";
 import mappoint from "../images/icons/mappoint.svg";
 
 export const Navbar = () => {
