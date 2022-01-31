@@ -24,7 +24,7 @@ const coordinates = [
   },
 ];
 
-function MapYandex() {
+function MapYandex({ setOpenItem }) {
   return (
     <div className="map-yandex">
       <div id="adress-pto">
@@ -45,7 +45,7 @@ function MapYandex() {
                 Режим работы с 9:00 до 18:00 <br />
                 Без выходных
               </span>
-              <RegButton />
+              <RegButton setOpenItem={setOpenItem} />
             </div>
           </div>
         </div>

@@ -770,13 +770,12 @@ header {
 }
 
 .send-form {
-  position: fixed;
+  overflow: visible;
+  position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  // top: 50px;
-
+  top: 50px;
   width: 589px;
   height: 838px;
   background: #fdfdfd;
@@ -786,6 +785,7 @@ header {
 
   hr {
     border: 1px solid #e2e2e278;
+    margin-top: 95px;
 
     &:last-child {
       margin: auto;
@@ -796,12 +796,12 @@ header {
   }
 
   .send-form__title {
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    top: 30px;
+    left: 10%;
 
     img {
       margin-right: 10px;
@@ -879,7 +879,7 @@ header {
     margin-right: auto;
     border: none;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 12px;
     text-align: center;
     color: #ffffff;
@@ -890,6 +890,7 @@ header {
     &:disabled {
       width: 100%;
       background: #ececec;
+      font-size: 10px;
       color: #a7a7a7;
     }
   }
@@ -897,6 +898,36 @@ header {
   .send-form__error {
     font-size: 10px;
     color: red;
+  }
+}
+
+.modal-content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transform: translateY(-150%);
+  animation: send-form 0.5s forwards;
+
+  #modal__close-btn {
+    position: absolute;
+    top: 60px;
+    left: 250px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  @keyframes send-form {
+    0% {
+      transform: translateY(-150%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 }
 

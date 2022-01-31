@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 import { information } from "./data";
 import { RegButton } from "./RegButton";
 
-export const Header = () => {
+export const Header = ({ setOpenItem }) => {
   return (
     <header>
       <div id="top">
@@ -36,7 +36,7 @@ export const Header = () => {
                   </tr>
                 </tbody>
               </table>
-              <RegButton />
+              <RegButton setOpenItem={setOpenItem} />
             </div>
           </div>
         </div>

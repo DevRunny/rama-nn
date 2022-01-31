@@ -8,6 +8,7 @@ export const SendForm = () => {
   const [gosNumber, setGosNumber] = React.useState("");
   const [vin, setVin] = React.useState("");
   const [date, setDate] = React.useState("");
+  const [checkbox, setCheckbox] = React.useState("");
 
   const [fioDirty, setFioDirty] = React.useState(false);
   const [phoneDirty, setPhoneDirty] = React.useState(false);
@@ -28,6 +29,9 @@ export const SendForm = () => {
   );
   const [vinError, setVinError] = React.useState("Заполните VIN номер ТС");
   const [dateError, setDateError] = React.useState("Укажите дату");
+  const [checkboxError, setCheckboxError] = React.useState(
+    "Необходимо согласиться с условиями"
+  );
 
   const [formValid, setFormValid] = React.useState(false);
   const [submitValue, setSubmitValue] = React.useState("");
@@ -49,7 +53,8 @@ export const SendForm = () => {
       modelError ||
       gosNumberError ||
       vinError ||
-      dateError
+      dateError ||
+      checkboxError
     ) {
       setFormValid(false);
       setSubmitValue(
@@ -59,12 +64,20 @@ export const SendForm = () => {
       setFormValid(true);
       setSubmitValue("Отправить заявку");
     }
-  }, [fioError, phoneError, modelError, gosNumberError, vinError, dateError]);
+  }, [
+    fioError,
+    phoneError,
+    modelError,
+    gosNumberError,
+    vinError,
+    dateError,
+    checkboxError,
+  ]);
 
   const fioHandler = (e) => {
     setFio(e.target.value);
     const re =
-      /^([А-ЯA-Z]|[А-ЯA-Z][\x27а-яa-z]{1,}|[А-ЯA-Z][\x27а-яa-z]{1,}\-([А-ЯA-Z][\x27а-яa-z]{1,}|(оглы)|(кызы)))\040[А-ЯA-Z][\x27а-яa-z]{1,}(\040[А-ЯA-Z][\x27а-яa-z]{1,})?$/;
+      /^([А-ЯA-Z]|[А-ЯA-Z][\x27а-яa-z]{1,}|[А-ЯA-Z][\x27а-яa-z]{1,}-([А-ЯA-Z][\x27а-яa-z]{1,}|(оглы)|(кызы)))\040[А-ЯA-Z][\x27а-яa-z]{1,}(\040[А-ЯA-Z][\x27а-яa-z]{1,})?$/;
     if (!re.test(e.target.value)) {
       setFioError("Некорректное имя");
       setFioValid("");
@@ -76,7 +89,7 @@ export const SendForm = () => {
 
   const phoneHandler = (e) => {
     setPhone(e.target.value);
-    const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    const re = /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/;
     if (!re.test(e.target.value)) {
       setPhoneError("Некорректный нормер телефона");
       setPhoneValid("");
@@ -131,6 +144,15 @@ export const SendForm = () => {
     } else {
       setDateError("");
       setDateValid(classValidInput);
+    }
+  };
+
+  const checkboxHandler = (e) => {
+    setCheckbox(e.target.checked);
+    if (!e.target.checked) {
+      setCheckboxError("Необходимо согласиться с условиями");
+    } else {
+      setCheckboxError("");
     }
   };
 
@@ -269,9 +291,16 @@ export const SendForm = () => {
           type="text"
           placeholder="Ваш комментарий"
         />
+        {<div className="send-form__error">{checkboxError}</div>}
         <label className="send-form__checkbox-label">
-          <input className="send-form__checkbox" type="checkbox" />Я соглашаюсь
-          на обработу персональных данных
+          <input
+            onChange={(e) => checkboxHandler(e)}
+            value={checkbox}
+            className="send-form__checkbox"
+            type="checkbox"
+            required
+          />
+          Я соглашаюсь на обработу персональных данных
         </label>
 
         <input

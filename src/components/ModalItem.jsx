@@ -13,18 +13,33 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
 
   if (!openItem) return null;
 
-  return (
-    <div id="overlay" onClick={closeModal}>
-      <SendForm />
-      <div className="modal-image">
-        {openItem.image}
-        <img
-          id="modal__close-btn"
-          src={closeBtn}
-          alt="close-btn"
-          onClick={closeModal}
-        />
+  if (openItem.image)
+    return (
+      <div id="overlay" onClick={closeModal}>
+        <div className="modal-image">
+          {openItem.image}
+          <img
+            id="modal__close-btn"
+            src={closeBtn}
+            alt="close-btn"
+            onClick={closeModal}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+
+  if (openItem.target.id === "reg-button")
+    return (
+      <div id="overlay" onClick={closeModal}>
+        <div className="modal-content">
+          <img
+            id="modal__close-btn"
+            src={closeBtn}
+            alt="close-btn"
+            onClick={closeModal}
+          />
+          <SendForm />
+        </div>
+      </div>
+    );
 };

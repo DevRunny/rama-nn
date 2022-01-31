@@ -39,7 +39,7 @@ export const links = [
   {
     id: 4,
     text: "Запись на ТО",
-    url: "#request",
+    url: "#reg-button",
   },
   {
     id: 5,

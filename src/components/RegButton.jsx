@@ -1,9 +1,15 @@
 import React from "react";
 
-export const RegButton = () => {
+export const RegButton = ({ setOpenItem }) => {
   return (
     <div>
-      <button className="reg-button">Записаться на ТО</button>
+      <button
+        id="reg-button"
+        className="reg-button"
+        onClick={(e) => setOpenItem(e)}
+      >
+        Записаться на ТО
+      </button>
     </div>
   );
 };

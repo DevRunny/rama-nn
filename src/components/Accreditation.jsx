@@ -1,6 +1,5 @@
 import React from "react";
 import { documents } from "./data";
-import { ModalItem } from "./ModalItem";
 
 export const Accreditation = ({ setOpenItem }) => {
   return (
@@ -20,8 +19,6 @@ export const Accreditation = ({ setOpenItem }) => {
           </ul>
         </div>
       </div>
-
-      <ModalItem />
     </section>
   );
 };

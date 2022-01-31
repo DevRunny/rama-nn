@@ -10,7 +10,6 @@ import { Accreditation } from "./components/Accreditation";
 import { Footer } from "./components/Footer";
 import { ModalItem } from "./components/ModalItem";
 import { ScrollTop } from "./components/ScrollTop";
-import { SendForm } from "./components/SendForm";
 
 function App() {
   const [openItem, setOpenItem] = React.useState(null);
@@ -18,16 +17,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setOpenItem={setOpenItem} />
       <ReqDocuments />
       <ScopeOfAccreditation />
       <Features />
-      <MapYandex />
+      <MapYandex setOpenItem={setOpenItem} />
       <Accreditation setOpenItem={setOpenItem} />
       <Footer />
       <ModalItem openItem={openItem} setOpenItem={setOpenItem} />
       <ScrollTop visible={visible} setVisible={setVisible} />
-      <SendForm />
     </div>
   );
 }
