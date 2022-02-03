@@ -26,7 +26,9 @@ export const Navbar = () => {
           <div className="navbar__contacts">
             <span>{information.adress}</span>
             <hr />
-            <span>{information.tel}</span>
+            <span>
+              <a href={information.hrefTel}>{information.tel}</a>
+            </span>
           </div>
         </div>
       </nav>

@@ -6,8 +6,10 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
   function closeModal(e) {
     if (e.target.id === "overlay") {
       setOpenItem(null);
+      document.querySelector("body").style.overflow = "visible";
     } else if (e.target.id === "modal__close-btn") {
       setOpenItem(null);
+      document.querySelector("body").style.overflow = "visible";
     }
   }
 
@@ -15,7 +17,7 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
 
   if (openItem.image)
     return (
-      <div id="overlay" onClick={closeModal}>
+      <div id="overlay" onMouseDown={closeModal}>
         <div className="modal-image">
           {openItem.image}
           <img
@@ -30,7 +32,7 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
 
   if (openItem.target.id === "reg-button")
     return (
-      <div id="overlay" onClick={closeModal}>
+      <div id="overlay" onMouseDown={closeModal}>
         <div className="modal-content">
           <img
             id="modal__close-btn"

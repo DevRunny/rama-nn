@@ -6,7 +6,10 @@ export const RegButton = ({ setOpenItem }) => {
       <button
         id="reg-button"
         className="reg-button"
-        onClick={(e) => setOpenItem(e)}
+        onClick={(e) => {
+          document.querySelector("body").style.overflow = "hidden";
+          setOpenItem(e);
+        }}
       >
         Записаться на ТО
       </button>

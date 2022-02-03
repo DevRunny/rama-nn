@@ -33,7 +33,9 @@ export const Footer = () => {
             </div>
             <div className="footer__info">
               <span>{information.adress}</span> <hr />{" "}
-              <span>{information.tel}</span>
+              <span>
+                <a href={information.hrefTel}>{information.tel}</a>
+              </span>
             </div>
             <div className="footer__copyright">
               <span>
