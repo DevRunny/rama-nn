@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-export const ScrollTop = () => {
-  const [visible, setVisible] = useState(false);
-
+export const ScrollTop = ({ visible, setVisible }) => {
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300) {
@@ -30,7 +28,7 @@ export const ScrollTop = () => {
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
       >
-        <i className="arrow-up" />
+        <i className="scroll-to-top__arrow-up" />
       </button>
     </>
   );

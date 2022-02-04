@@ -2,6 +2,7 @@ import React from "react";
 import { information } from "./data";
 import logo from "../images/icons/logo.svg";
 import footerCar from "../images/icons/footercar.svg";
+import { footerLinks } from "./data";
 
 export const Footer = () => {
   return (
@@ -15,21 +16,13 @@ export const Footer = () => {
               <label className="logo-label">{information.label}</label>
             </div>
             <div className="footer__links">
-              <li>
-                <a href="#documents">Необходимые документы</a>
-              </li>
-              <li>
-                <a href="#categories">Область аккредитации</a>
-              </li>
-              <li>
-                <a href="#features">Принцип работы</a>
-              </li>
-              <li>
-                <a href="#adress-pto">Контакты</a>
-              </li>
-              <li>
-                <a href="#certificate">Аттестат</a>
-              </li>
+              {footerLinks.map((link) => {
+                return (
+                  <li key={link.id}>
+                    <a href={link.href}>{link.text}</a>
+                  </li>
+                );
+              })}
             </div>
             <div className="footer__info">
               <span>{information.adress}</span> <hr />{" "}

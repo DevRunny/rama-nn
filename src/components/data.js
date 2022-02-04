@@ -24,27 +24,55 @@ export const links = [
   {
     id: 1,
     text: "Область аккредитации",
-    url: "#categories",
+    href: "#categories",
   },
   {
     id: 2,
     text: "Адрес ПТО",
-    url: "#adress-pto",
+    href: "#adress-pto",
   },
   {
     id: 3,
     text: "Контакты",
-    url: "#contacts",
+    href: "#contacts",
   },
   {
     id: 4,
     text: "Запись на ТО",
-    url: "#reg-button",
+    href: "#reg-button",
   },
   {
     id: 5,
     text: "Аттестат",
-    url: "#certificate",
+    href: "#certificate",
+  },
+];
+
+export const footerLinks = [
+  {
+    id: 1,
+    text: "Необходимые документы",
+    href: "#documents",
+  },
+  {
+    id: 2,
+    text: "Область аккредитации",
+    href: "#categories",
+  },
+  {
+    id: 3,
+    text: "Принцип работы",
+    href: "#features",
+  },
+  {
+    id: 4,
+    text: "Контакты",
+    href: "#adress-pto",
+  },
+  {
+    id: 5,
+    text: "Аттестат",
+    href: "#certificate",
   },
 ];
 

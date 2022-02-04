@@ -6,6 +6,7 @@ import mappoint from "../images/icons/mappoint.svg";
 export const Navbar = () => {
   return (
     <section className="navbar">
+      {/* <div className="navbar__burger-menu"></div> */}
       <nav>
         <a className="navbar__logo" href="/">
           <img src={logo} className="logo" alt="logo" />
@@ -15,7 +16,7 @@ export const Navbar = () => {
           {links.map((link) => {
             return (
               <li key={link.id}>
-                <a href={link.url}>{link.text}</a>
+                <a href={link.href}>{link.text}</a>
               </li>
             );
           })}

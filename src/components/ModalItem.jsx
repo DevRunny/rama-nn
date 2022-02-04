@@ -5,9 +5,9 @@ import { SendForm } from "./SendForm";
 export const ModalItem = ({ openItem, setOpenItem }) => {
   useEffect(() => {
     if (!openItem) {
-      document.body.style.overflowY = "scroll";
+      document.body.style.overflow = "auto";
     } else {
-      document.body.style.overflowY = "hidden";
+      document.body.style.overflow = "hidden";
     }
   });
 

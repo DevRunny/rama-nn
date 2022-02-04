@@ -1,47 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import person from "../images/icons/person.svg";
 
 export const SendForm = () => {
-  const [fio, setFio] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [model, setModel] = React.useState("");
-  const [gosNumber, setGosNumber] = React.useState("");
-  const [vin, setVin] = React.useState("");
-  const [date, setDate] = React.useState("");
-  const [checkbox, setCheckbox] = React.useState("");
+  const [fio, setFio] = useState("");
+  const [phone, setPhone] = useState("");
+  const [model, setModel] = useState("");
+  const [gosNumber, setGosNumber] = useState("");
+  const [vin, setVin] = useState("");
+  const [date, setDate] = useState("");
+  const [checkbox, setCheckbox] = useState("");
 
-  const [fioDirty, setFioDirty] = React.useState(false);
-  const [phoneDirty, setPhoneDirty] = React.useState(false);
-  const [modelDirty, setModelDirty] = React.useState(false);
-  const [gosNumberDirty, setGosNumberDirty] = React.useState(false);
-  const [vinDirty, setVinDirty] = React.useState(false);
-  const [dateDirty, setDateDirty] = React.useState(false);
+  const [fioDirty, setFioDirty] = useState(false);
+  const [phoneDirty, setPhoneDirty] = useState(false);
+  const [modelDirty, setModelDirty] = useState(false);
+  const [gosNumberDirty, setGosNumberDirty] = useState(false);
+  const [vinDirty, setVinDirty] = useState(false);
+  const [dateDirty, setDateDirty] = useState(false);
 
-  const [fioError, setFioError] = React.useState("Заполните ФИО");
-  const [phoneError, setPhoneError] = React.useState(
-    "Заполните номер телефона"
-  );
-  const [modelError, setModelError] = React.useState(
-    "Заполните марку и модель ТС"
-  );
-  const [gosNumberError, setGosNumberError] = React.useState(
+  const [fioError, setFioError] = useState("Заполните ФИО");
+  const [phoneError, setPhoneError] = useState("Заполните номер телефона");
+  const [modelError, setModelError] = useState("Заполните марку и модель ТС");
+  const [gosNumberError, setGosNumberError] = useState(
     "Заполните регистрационный знак"
   );
-  const [vinError, setVinError] = React.useState("Заполните VIN номер ТС");
-  const [dateError, setDateError] = React.useState("Укажите дату");
-  const [checkboxError, setCheckboxError] = React.useState(
+  const [vinError, setVinError] = useState("Заполните VIN номер ТС");
+  const [dateError, setDateError] = useState("Укажите дату");
+  const [checkboxError, setCheckboxError] = useState(
     "Необходимо согласиться с условиями"
   );
 
-  const [formValid, setFormValid] = React.useState(false);
-  const [submitValue, setSubmitValue] = React.useState("");
+  const [formValid, setFormValid] = useState(false);
+  const [submitValue, setSubmitValue] = useState("");
 
-  const [fioValid, setFioValid] = React.useState("");
-  const [phoneValid, setPhoneValid] = React.useState("");
-  const [modelValid, setModelValid] = React.useState("");
-  const [gosNumberValid, setGosNumberValid] = React.useState("");
-  const [vinValid, setVinValid] = React.useState("");
-  const [dateValid, setDateValid] = React.useState("");
+  const [fioValid, setFioValid] = useState("");
+  const [phoneValid, setPhoneValid] = useState("");
+  const [modelValid, setModelValid] = useState("");
+  const [gosNumberValid, setGosNumberValid] = useState("");
+  const [vinValid, setVinValid] = useState("");
+  const [dateValid, setDateValid] = useState("");
 
   let classInput = "send-form__input";
   let classValidInput = " valid";
