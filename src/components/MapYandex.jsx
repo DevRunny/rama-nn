@@ -24,7 +24,7 @@ const coordinates = [
   },
 ];
 
-function MapYandex({ setOpenItem }) {
+export const MapYandex = ({ setOpenItem }) => {
   return (
     <div className="map-yandex">
       <div id="adress-pto">
@@ -86,6 +86,4 @@ function MapYandex({ setOpenItem }) {
       </YMaps>
     </div>
   );
-}
-
-export default MapYandex;
+};

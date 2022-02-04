@@ -7,7 +7,6 @@ export const RegButton = ({ setOpenItem }) => {
         id="reg-button"
         className="reg-button"
         onClick={(e) => {
-          document.querySelector("body").style.overflow = "hidden";
           setOpenItem(e);
         }}
       >

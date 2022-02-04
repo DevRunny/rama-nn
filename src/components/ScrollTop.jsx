@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export const ScrollTop = ({ visible, setVisible }) => {
+export const ScrollTop = () => {
+  const [visible, setVisible] = useState(false);
+
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300) {
@@ -10,14 +12,16 @@ export const ScrollTop = ({ visible, setVisible }) => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisible);
+  });
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
-  window.addEventListener("scroll", toggleVisible);
 
   return (
     <>

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import closeBtn from "../images/icons/closebtn.svg";
 import { SendForm } from "./SendForm";
 
 export const ModalItem = ({ openItem, setOpenItem }) => {
-  function closeModal(e) {
+  useEffect(() => {
+    if (!openItem) {
+      document.body.style.overflowY = "scroll";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
+  });
+
+  const closeModal = (e) => {
     if (e.target.id === "overlay") {
       setOpenItem(null);
-      document.querySelector("body").style.overflow = "visible";
     } else if (e.target.id === "modal__close-btn") {
       setOpenItem(null);
-      document.querySelector("body").style.overflow = "visible";
     }
-  }
+  };
 
   if (!openItem) return null;
 
