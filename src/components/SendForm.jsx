@@ -41,6 +41,7 @@ export const SendForm = () => {
 
   let classInput = "send-form__input";
   let classValidInput = " valid";
+  let classErrorInput = "send-form__error";
 
   useEffect(() => {
     if (
@@ -191,7 +192,7 @@ export const SendForm = () => {
       <form>
         <label>ФИО Владельца ТС:</label>
         {fioDirty && fioError && (
-          <div className="send-form__error">{fioError}</div>
+          <div className={classErrorInput}>{fioError}</div>
         )}
         <input
           onChange={(e) => fioHandler(e)}
@@ -206,7 +207,7 @@ export const SendForm = () => {
 
         <label>Номер телефона для связи:</label>
         {phoneDirty && phoneError && (
-          <div className="send-form__error">{phoneError}</div>
+          <div className={classErrorInput}>{phoneError}</div>
         )}
         <input
           onChange={(e) => phoneHandler(e)}
@@ -221,7 +222,7 @@ export const SendForm = () => {
 
         <label>Марка и модель ТС:</label>
         {modelDirty && modelError && (
-          <div className="send-form__error">{modelError}</div>
+          <div className={classErrorInput}>{modelError}</div>
         )}
         <input
           onChange={(e) => modelHandler(e)}
@@ -236,7 +237,7 @@ export const SendForm = () => {
 
         <label>Государственный регистрационный знак:</label>
         {gosNumberDirty && gosNumberError && (
-          <div className="send-form__error">{gosNumberError}</div>
+          <div className={classErrorInput}>{gosNumberError}</div>
         )}
         <input
           onChange={(e) => gosNumberHandler(e)}
@@ -251,7 +252,7 @@ export const SendForm = () => {
 
         <label>VIN номер ТС:</label>
         {vinDirty && vinError && (
-          <div className="send-form__error">{vinError}</div>
+          <div className={classErrorInput}>{vinError}</div>
         )}
         <input
           onChange={(e) => vinHandler(e)}
@@ -266,7 +267,7 @@ export const SendForm = () => {
 
         <label>Дата и время прохождения ТО:</label>
         {dateDirty && dateError && (
-          <div className="send-form__error">{dateError}</div>
+          <div className={classErrorInput}>{dateError}</div>
         )}
         <input
           onChange={(e) => dateHandler(e)}
@@ -287,7 +288,7 @@ export const SendForm = () => {
           type="text"
           placeholder="Ваш комментарий"
         />
-        {<div className="send-form__error">{checkboxError}</div>}
+        {<div className={classErrorInput}>{checkboxError}</div>}
         <label className="send-form__checkbox-label">
           <input
             onChange={(e) => checkboxHandler(e)}
