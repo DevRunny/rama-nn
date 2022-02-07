@@ -6,7 +6,7 @@ import mappoint from "../images/icons/mappoint.svg";
 export const Navbar = () => {
   return (
     <section className="navbar">
-      {/* <div className="navbar__burger-menu"></div> */}
+      <div className="navbar__burger-menu"></div>
       <nav>
         <a className="navbar__logo" href="/">
           <img src={logo} className="logo" alt="logo" />
