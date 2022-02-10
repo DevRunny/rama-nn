@@ -3,11 +3,11 @@ import { Navbar } from "./Navbar";
 import { information } from "./data";
 import { RegButton } from "./RegButton";
 
-export const Header = ({ setOpenItem }) => {
+export const Header = ({ setOpenItem, setOpenMenu, openMenu }) => {
   return (
     <header>
       <div id="top">
-        <Navbar />
+        <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
         <div className="container">
           <div className="header__info">
             <div>

@@ -54,9 +54,14 @@ export const SendForm = () => {
       checkboxError
     ) {
       setFormValid(false);
-      setSubmitValue(
-        "Вы не заполнили все обязательные поля выше. Вы сможете отправить заявку после заполнения."
-      );
+
+      if (window.outerWidth > 375) {
+        setSubmitValue(
+          "Вы не заполнили все обязательные поля выше. Вы сможете отправить заявку после заполнения."
+        );
+      } else {
+        setSubmitValue("Заполните все поля.");
+      }
     } else {
       setFormValid(true);
       setSubmitValue("Отправить заявку");

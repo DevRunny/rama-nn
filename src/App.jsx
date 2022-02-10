@@ -1,5 +1,6 @@
 import React from "react";
 import "./scss/App.scss";
+import "./scss/responsive.scss";
 import "./scss/fonts.scss";
 import { Header } from "./components/Header";
 import { ReqDocuments } from "./components/ReqDocuments";
@@ -12,14 +13,17 @@ import { ModalItem } from "./components/ModalItem";
 import { ScrollTop } from "./components/ScrollTop";
 import { useOpenModal } from "../src/components/Hooks/useOpenModal";
 import { useScrollToTop } from "../src/components/Hooks/useScrollToTop";
+import { useOpenBurgerMenu } from "../src/components/Hooks/useOpenBurgerMenu";
+import { BurgerMenu } from "./components/BurgerMenu";
 
 function App() {
   const openModal = useOpenModal();
   const scrollToTop = useScrollToTop();
+  const openBurgerMenu = useOpenBurgerMenu();
 
   return (
     <div className="App">
-      <Header {...openModal} />
+      <Header {...openModal} {...openBurgerMenu} />
       <ReqDocuments />
       <ScopeOfAccreditation />
       <Features />
@@ -28,6 +32,7 @@ function App() {
       <Footer />
       <ModalItem {...openModal} />
       <ScrollTop {...scrollToTop} />
+      <BurgerMenu {...openBurgerMenu} />
     </div>
   );
 }
