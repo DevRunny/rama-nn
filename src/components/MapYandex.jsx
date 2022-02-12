@@ -1,5 +1,5 @@
 import React from "react";
-import { information } from "./data";
+import { information } from "./Data";
 import mapIcon from "../images/icons/mapicon.svg";
 import mappoint from "../images/icons/mappoint.svg";
 import {

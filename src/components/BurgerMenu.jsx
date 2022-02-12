@@ -1,10 +1,11 @@
 import React from "react";
-import { links } from "./data";
+import { links } from "./Data";
 
 export const BurgerMenu = ({ openMenu, setOpenMenu }) => {
   const closeBurgerMenu = (e) => {
-    if (e.target.parentNode.tagName === "LI") {
+    if (e.target.elementType === "li") {
       setOpenMenu(null);
+      console.dir(e.target);
     } else {
       setOpenMenu(null);
     }

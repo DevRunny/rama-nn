@@ -1,16 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import closeBtn from "../images/icons/closebtn.svg";
 import { SendForm } from "./SendForm";
 
 export const ModalItem = ({ openItem, setOpenItem }) => {
-  useEffect(() => {
-    if (!openItem) {
-      document.body.style.overflow = "auto";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  });
-
   const closeModal = (e) => {
     if (e.target.id === "overlay") {
       setOpenItem(null);

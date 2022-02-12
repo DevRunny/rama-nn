@@ -39,9 +39,9 @@ export const SendForm = () => {
   const [vinValid, setVinValid] = useState("");
   const [dateValid, setDateValid] = useState("");
 
-  let classInput = "send-form__input";
-  let classValidInput = " valid";
-  let classErrorInput = "send-form__error";
+  const classInput = "send-form__input";
+  const classValidInput = " valid";
+  const classErrorInput = "send-form__error";
 
   useEffect(() => {
     if (
@@ -55,7 +55,7 @@ export const SendForm = () => {
     ) {
       setFormValid(false);
 
-      if (window.outerWidth > 375) {
+      if (window.innerWidth > 375) {
         setSubmitValue(
           "Вы не заполнили все обязательные поля выше. Вы сможете отправить заявку после заполнения."
         );

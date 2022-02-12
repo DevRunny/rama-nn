@@ -1,6 +1,10 @@
 import motoIcon from "../images/icons/moto.svg";
 import carIcon from "../images/icons/car.svg";
 import truckIcon from "../images/icons/truck.svg";
+import lawIcon from "../images/icons/law.svg";
+import contractIcon from "../images/icons/contract.svg";
+import rulesIcon from "../images/icons/rules.svg";
+import qualificationIcon from "../images/icons/qualification.svg";
 import doc1 from "../images/files/doc1.png";
 import doc2 from "../images/files/doc2.png";
 import doc3 from "../images/files/doc3.png";
@@ -108,6 +112,37 @@ export const categories = [
     ),
     header: "N1",
     text: "Транспортные средства, предназначенные для перевозки грузов, имеющие технически допустимую максимальную массу не более 3,5 тонн.",
+  },
+];
+
+export const features = [
+  {
+    id: 1,
+    image: <img src={lawIcon} alt="law-icon"></img>,
+    header: "Соблюдаем Закон РФ",
+    text: "Федеральный закон о техническом осмотре транспортных средств можно посмотреть ",
+    href: "#",
+  },
+  {
+    id: 2,
+    image: <img src={contractIcon} alt="contract-icon"></img>,
+    header: "Оформляем официально",
+    text: "Посмотреть форму договора можно ",
+    href: "#",
+  },
+  {
+    id: 3,
+    image: <img src={rulesIcon} alt="rules-icon"></img>,
+    header: "Действуем согласно правилам",
+    text: "Посмотреть текст правил технического осмотра ТС можно ",
+    href: "#",
+  },
+  {
+    id: 4,
+    image: <img src={qualificationIcon} alt="qualification-icon"></img>,
+    header: "Имеем квалификацию",
+    text: "Посмотреть Сертификат сотрудника линии ТО можно ",
+    href: "#",
   },
 ];
 

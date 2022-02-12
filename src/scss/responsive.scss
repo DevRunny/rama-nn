@@ -1,7 +1,7 @@
 @import "variables";
 
 @media (max-width: 1600px) {
-  .navbar {
+  header {
     display: flex;
     justify-content: center;
     padding-top: 0;
@@ -15,27 +15,12 @@
       transform: rotate(0deg);
     }
 
-    &__logo {
-      margin-left: 5px;
-    }
-
-    &__info {
-      width: 100%;
-      height: 50px;
-
-      .navbar__contacts {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+    .navbar {
+      &__logo {
+        margin-left: 5px;
       }
 
-      hr {
-        display: none;
-      }
-    }
-
-    nav {
-      .navbar__links {
+      &__links {
         li {
           &:first-child {
             margin-left: 20px;
@@ -67,6 +52,21 @@
           }
         }
       }
+
+      &__info {
+        width: 100%;
+        height: 50px;
+
+        hr {
+          display: none;
+        }
+      }
+
+      &__contacts {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   }
 
@@ -83,27 +83,26 @@
   .logo-label {
     font-size: 25px;
   }
+
   .navbar {
-    nav {
-      .navbar__links {
-        li {
-          &:first-child {
-            margin-left: 10px;
-          }
+    &__links {
+      li {
+        &:first-child {
+          margin-left: 10px;
+        }
 
-          &:last-child {
-            margin-right: 10px;
-          }
+        &:last-child {
+          margin-right: 10px;
+        }
 
-          a {
-            font-size: 11px;
-            color: #ffffff;
-            height: 49px;
-          }
+        a {
+          font-size: 11px;
+          color: #ffffff;
+          height: 49px;
         }
       }
     }
-    .navbar__info {
+    &__info {
       span {
         &:first-child {
           font-size: 12px;
@@ -133,7 +132,7 @@
     height: 25px;
 
     &__arrow-up {
-      padding: 7px;
+      padding: 5px;
       margin-top: 7px;
       border-width: 0px 4px 4px 0px;
     }
@@ -149,7 +148,7 @@
     font-size: 25px;
   }
 
-  .navbar {
+  header {
     height: 50px;
 
     hr {
@@ -173,7 +172,7 @@
       z-index: 2;
     }
 
-    &__burger-menu {
+    .burger-menu {
       display: block;
       width: 32px;
       height: 32px;
@@ -190,33 +189,31 @@
       }
     }
 
-    nav {
-      .navbar__links {
+    .navbar {
+      &__links {
         display: none;
       }
-    }
 
-    &__info {
-      width: 100%;
-      height: 0;
+      &__info {
+        width: 100%;
+        height: 0;
 
-      hr {
-        display: none;
+        span {
+          &:first-child {
+            font-size: 8px;
+          }
+          &:last-child {
+            font-size: 13px;
+          }
+        }
+
+        hr {
+          display: none;
+        }
       }
-    }
 
-    .navbar__info {
-      .navbar__contacts {
+      &__contacts {
         align-items: flex-end;
-      }
-
-      span {
-        &:first-child {
-          font-size: 8px;
-        }
-        &:last-child {
-          font-size: 13px;
-        }
       }
 
       .mappoint {

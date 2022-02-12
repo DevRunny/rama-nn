@@ -1,20 +1,20 @@
 import logo from "../images/icons/logo.svg";
-import { links } from "./data";
-import { information } from "./data";
+import { links } from "./Data";
+import { information } from "./Data";
 import mappoint from "../images/icons/mappoint.svg";
 import burgerMenu from "../images/icons/burgermenu.svg";
 import closeBurger from "../images/icons/closeburger.svg";
 
 export const Navbar = ({ openMenu, setOpenMenu }) => {
   return (
-    <section className="navbar">
+    <header>
       <div
-        className="navbar__burger-menu"
+        className="burger-menu"
         onClick={(e) => (!openMenu ? setOpenMenu(e) : setOpenMenu(null))}
       >
         <img src={!openMenu ? burgerMenu : closeBurger} alt="burger-menu"></img>
       </div>
-      <nav>
+      <nav className="navbar">
         <a className="navbar__logo" href="/">
           <img src={logo} className="logo" alt="logo" />
           <label className="logo-label">{information.label}</label>
@@ -41,6 +41,6 @@ export const Navbar = ({ openMenu, setOpenMenu }) => {
         </div>
       </nav>
       <hr />
-    </section>
+    </header>
   );
 };

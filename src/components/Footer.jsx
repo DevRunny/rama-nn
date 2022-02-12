@@ -1,8 +1,8 @@
 import React from "react";
-import { information } from "./data";
+import { information } from "./Data";
+import { footerLinks } from "./Data";
 import logo from "../images/icons/logo.svg";
 import footerCar from "../images/icons/footercar.svg";
-import { footerLinks } from "./data";
 
 export const Footer = () => {
   return (

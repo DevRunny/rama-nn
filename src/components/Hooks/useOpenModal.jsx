@@ -1,6 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const useOpenModal = () => {
   const [openItem, setOpenItem] = useState(null);
+
+  useEffect(() => {
+    if (!openItem) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  });
+
   return { openItem, setOpenItem };
 };

@@ -1,32 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { scrollToTop } from "./Hooks/useScrollToTop";
 
-export const ScrollTop = ({ visible, setVisible }) => {
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300) {
-      setVisible(true);
-    } else if (scrolled <= 300) {
-      setVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
-  });
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
+export const ScrollTop = ({ visible }) => {
   return (
     <>
       <button
         className="scroll-to-top"
         onClick={scrollToTop}
-        style={{ display: visible ? "inline" : "none" }}
+        style={{ display: visible ? "block" : "none" }}
       >
         <i className="scroll-to-top__arrow-up" />
       </button>

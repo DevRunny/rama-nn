@@ -1,5 +1,5 @@
 import React from "react";
-import { documents } from "./data";
+import { documents } from "./Data";
 
 export const Accreditation = ({ setOpenItem }) => {
   return (
