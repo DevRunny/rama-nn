@@ -1,4 +1,4 @@
-Дла просмотра сайта: [devrunny.github.io/rama-nn/](devrunny.github.io/rama-nn/)
+Дла просмотра сайта: [https://devrunny.github.io/rama-nn/](https://devrunny.github.io/rama-nn/)
 
 
 # Getting Started with Create React App
