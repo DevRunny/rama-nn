@@ -25,7 +25,7 @@ export const Footer = () => {
               })}
             </div>
             <div className="footer__info">
-              <span>{information.adress}</span> <hr />{" "}
+              <span>{information.address}</span> <hr />{" "}
               <span>
                 <a href={information.hrefTel}>{information.tel}</a>
               </span>

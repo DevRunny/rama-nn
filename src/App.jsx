@@ -11,9 +11,9 @@ import { Accreditation } from "./components/Accreditation";
 import { Footer } from "./components/Footer";
 import { ModalItem } from "./components/ModalItem";
 import { ScrollTop } from "./components/ScrollTop";
-import { useOpenModal } from "../src/components/Hooks/useOpenModal";
-import { useScrollToTop } from "../src/components/Hooks/useScrollToTop";
-import { useOpenBurgerMenu } from "../src/components/Hooks/useOpenBurgerMenu";
+import { useOpenModal } from "./components/Hooks/useOpenModal";
+import { useScrollToTop } from "./components/Hooks/useScrollToTop";
+import { useOpenBurgerMenu } from "./components/Hooks/useOpenBurgerMenu";
 import { BurgerMenu } from "./components/BurgerMenu";
 
 function App() {

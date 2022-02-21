@@ -74,7 +74,7 @@ header {
 
 .logo-label {
   white-space: nowrap;
-  font-family: "Jockey One";
+  font-family: "Jockey One", serif;
   font-size: 40px;
   color: #ff3d00;
 }
@@ -287,8 +287,7 @@ header {
   }
 
   hr {
-    margin: auto;
-    margin-bottom: 25px;
+    margin: auto auto 25px;
     width: 75%;
     border: 1px solid #e6e6e6;
   }
@@ -374,8 +373,7 @@ header {
       height: 314px;
       margin-top: 28px;
       margin-bottom: 65px;
-      padding: 10px;
-      padding-top: 38px;
+      padding: 38px 10px 10px;
       border: 1px solid #545454;
       box-sizing: border-box;
       border-radius: 25px;
@@ -469,7 +467,7 @@ header {
   }
 }
 
-.adress-pto {
+.address-pto {
   height: 0;
 }
 
@@ -572,8 +570,7 @@ header {
   }
 
   hr {
-    margin: auto;
-    margin-bottom: 25px;
+    margin: auto auto 25px;
     width: 75%;
     border: 1px solid #e6e6e6;
   }
@@ -812,10 +809,8 @@ header {
     padding: 10% 10% 0 10%;
 
     .valid {
-      background: url(../images/icons/checked.svg);
       background-size: 20px;
-      background-repeat: no-repeat;
-      background-position: 98%;
+      background: url(../images/icons/checked.svg) no-repeat 98%;
     }
 
     p {
@@ -892,9 +887,8 @@ header {
 }
 
 #top {
-  background: #c4c4c4 url(../images/bg-header.png);
+  background: #c4c4c4 url(../images/bg-header.png) no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   background-clip: border-box;
 }
 
@@ -905,17 +899,15 @@ header {
 }
 
 #categories {
-  background: #222222 url(../images/bg-categories.png);
+  background: #222222 url(../images/bg-categories.png) no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #features {
-  background: #c5c5c5 url(../images/bg-features.png);
+  background: #c5c5c5 url(../images/bg-features.png) no-repeat;
   background-blend-mode: overlay;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #accreditations {

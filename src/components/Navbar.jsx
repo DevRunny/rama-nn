@@ -12,7 +12,7 @@ export const Navbar = ({ openMenu, setOpenMenu }) => {
         className="burger-menu"
         onClick={(e) => (!openMenu ? setOpenMenu(e) : setOpenMenu(null))}
       >
-        <img src={!openMenu ? burgerMenu : closeBurger} alt="burger-menu"></img>
+        <img src={!openMenu ? burgerMenu : closeBurger} alt="burger-menu"/>
       </div>
       <nav className="navbar">
         <a className="navbar__logo" href="/">
@@ -30,9 +30,9 @@ export const Navbar = ({ openMenu, setOpenMenu }) => {
         </div>
         <hr />
         <div className="navbar__info">
-          <img src={mappoint} className="mappoint" alt="mpoint" />
+          <img src={mappoint} className="mappoint" alt="mappoint" />
           <div className="navbar__contacts">
-            <span>{information.adress}</span>
+            <span>{information.address}</span>
             <hr />
             <span>
               <a href={information.hrefTel}>{information.tel}</a>

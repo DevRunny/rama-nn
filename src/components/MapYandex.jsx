@@ -27,8 +27,8 @@ const coordinates = [
 export const MapYandex = ({ setOpenItem }) => {
   return (
     <div className="map-yandex">
-      <div id="adress-pto">
-        <div className="container adress-pto">
+      <div id="address-pto">
+        <div className="container address-pto">
           <div id="contacts" className="contacts">
             <div className="contacts__info">
               <img
@@ -37,7 +37,7 @@ export const MapYandex = ({ setOpenItem }) => {
                 alt="contacts__map-icon"
               />
               <h1>Контакты</h1>
-              <span>{information.fullAdress}</span>
+              <span>{information.fullAddress}</span>
               <hr />
               <a href={information.hrefTel}>{information.tel}</a>
               <a href={information.hrefEmail}>{information.email}</a>

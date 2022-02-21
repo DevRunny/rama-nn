@@ -15,8 +15,8 @@ export const information = {
   ogrn: "307264213100022",
   numberRSA: "01234",
   name: "Хафизов Рамиль Наилевич",
-  adress: "Московское шоссе, 302а к1",
-  fullAdress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а к1`,
+  address: "Московское шоссе, 302а к1",
+  fullAddress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а к1`,
   tel: "+7 (904) 399-14-50",
   hrefTel: "tel:+79043991450",
   email: "rama-nn@mail.ru",
@@ -33,7 +33,7 @@ export const links = [
   {
     id: 2,
     text: "Адрес ПТО",
-    href: "#adress-pto",
+    href: "#address-pto",
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const footerLinks = [
   {
     id: 4,
     text: "Контакты",
-    href: "#adress-pto",
+    href: "#address-pto",
   },
   {
     id: 5,
@@ -118,28 +118,28 @@ export const categories = [
 export const features = [
   {
     id: 1,
-    image: <img src={lawIcon} alt="law-icon"></img>,
+    image: <img src={lawIcon} alt="law-icon"/>,
     header: "Соблюдаем Закон РФ",
     text: "Федеральный закон о техническом осмотре транспортных средств можно посмотреть ",
     href: "#",
   },
   {
     id: 2,
-    image: <img src={contractIcon} alt="contract-icon"></img>,
+    image: <img src={contractIcon} alt="contract-icon"/>,
     header: "Оформляем официально",
     text: "Посмотреть форму договора можно ",
     href: "#",
   },
   {
     id: 3,
-    image: <img src={rulesIcon} alt="rules-icon"></img>,
+    image: <img src={rulesIcon} alt="rules-icon"/>,
     header: "Действуем согласно правилам",
     text: "Посмотреть текст правил технического осмотра ТС можно ",
     href: "#",
   },
   {
     id: 4,
-    image: <img src={qualificationIcon} alt="qualification-icon"></img>,
+    image: <img src={qualificationIcon} alt="qualification-icon"/>,
     header: "Имеем квалификацию",
     text: "Посмотреть Сертификат сотрудника линии ТО можно ",
     href: "#",
