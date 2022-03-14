@@ -14,7 +14,7 @@ export const useScrollToTop = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisible);
-  });
+  }, []);
 
   return { visible, setVisible };
 };

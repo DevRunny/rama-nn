@@ -74,6 +74,40 @@
     padding-bottom: 55px;
   }
 
+  .features-list {
+    ul {
+      li {
+        &:not(:nth-child(even)) {
+          margin-right: 20px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #top {
+    background-blend-mode: multiply;
+  }
+}
+
+@media (max-width: 1300px) {
+  .features-list {
+    ul {
+      li {
+        &:not(:nth-child(even)) {
+          margin-right: 0;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
   #top {
     background-blend-mode: multiply;
   }
@@ -102,11 +136,21 @@
         }
       }
     }
+
     &__info {
       span {
         &:first-child {
           font-size: 12px;
         }
+      }
+    }
+  }
+
+  .vehicle-categories {
+    ul {
+      h3 {
+        font-size: 12px;
+        line-height: 15px;
       }
     }
   }
@@ -127,19 +171,8 @@
 }
 
 @media (max-width: 768px) {
-  .scroll-to-top {
-    width: 25px;
-    height: 25px;
-
-    &__arrow-up {
-      padding: 5px;
-      margin-top: 7px;
-      border-width: 0px 4px 4px 0px;
-    }
-  }
-
   .logo {
-    margin-top: 0px;
+    margin-top: 0;
     margin-right: 6px;
     width: 25px;
   }
@@ -202,6 +235,7 @@
           &:first-child {
             font-size: 8px;
           }
+
           &:last-child {
             font-size: 13px;
           }
@@ -225,16 +259,66 @@
     }
   }
 
+  .header-info {
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    h3 {
+      font-size: 12px;
+      line-height: 25px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
   .vehicle-categories {
     ul {
       h3 {
-        font-size: 10px;
+        font-size: 8px;
+        line-height: 10px;
       }
     }
   }
 
   .map-yandex {
     height: 274px;
+    margin-bottom: 350px;
+
+    &__map-icon {
+      position: absolute;
+      display: block;
+      top: -40px;
+      right: 8px;
+    }
+
+  }
+
+  .contacts {
+    top: 275px;
+    width: 330px;
+    padding-left: 15px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+
+    &__map-icon {
+      display: none;
+    }
+
+    &__info {
+      width: 100%;
+      font-size: 12px;
+
+      h1 {
+        text-transform: none;
+      }
+    }
   }
 
   .certificate {
@@ -253,7 +337,6 @@
 
     &__title {
       position: absolute;
-      top: 5;
       white-space: nowrap;
 
       h1 {
@@ -294,7 +377,7 @@
     padding: 5% 0 0 10%;
     width: 100%;
     height: 590px;
-    left: 0px;
+    left: 0;
     top: 50px;
     background: #212121;
     transform: translateY(-150%);
@@ -328,5 +411,310 @@
         transform: translateX(0);
       }
     }
+  }
+}
+
+@media (max-width: 475px) {
+  .header-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #141414;
+    text-shadow: none;
+    padding-bottom: 25px;
+
+    h1 {
+      margin-top: 170px;
+      margin-bottom: 8px;
+      width: 281px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 22px;
+      white-space: nowrap;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      width: 60%;
+      font-size: 12px;
+      text-align: center;
+      line-height: 15px;
+    }
+
+    &__requisites {
+      font-size: 12px;
+      line-height: 15px;
+
+      span {
+        &:nth-child(2) {
+          padding-left: 15.7px;
+        }
+      }
+    }
+  }
+
+  .reg-button {
+    width: 179px;
+    height: 37px;
+    font-size: 13px;
+
+    &:hover {
+      background-position: 179px;
+    }
+  }
+
+  .documents {
+    padding-bottom: 25px;
+
+    hr {
+      display: none;
+    }
+
+    h1 {
+      padding-top: 25px;
+      font-size: 16px;
+      line-height: 15px;
+    }
+
+    ul {
+      li {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &__passport {
+      padding-bottom: 10px;
+      width: 89px;
+    }
+
+    &__cert {
+      padding-bottom: 10px;
+      width: 106px;
+    }
+  }
+
+  .vehicle-categories {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: left;
+    color: #363636;
+
+    h1 {
+      padding-left: 15px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    h3 {
+      padding-left: 15px;
+      font-size: 10px;
+      line-height: 8px;
+      color: #939393;
+    }
+
+    ul {
+      flex-direction: column;
+      justify-content: space-between;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 52px;
+        border: none;
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+
+        h1 {
+          color: #363636;
+          font-size: 20px;
+          padding: 10px;
+        }
+
+        h3 {
+          color: #363636;
+          margin-top: 0;
+          font-size: 10px;
+        }
+
+        hr {
+          display: none;
+        }
+
+        &:hover {
+          border: none;
+
+          img {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  .features-list {
+    ul {
+      margin: 25px 0 25px 0;
+
+      li {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 147px;
+        height: 152px;
+        padding: 25px 10px 25px 10px;
+
+        &:not(:nth-child(even)) {
+          margin-right: 10px;
+        }
+
+        &:not(:nth-child(3)):not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        h1 {
+          font-size: 10px;
+          line-height: 12px;
+        }
+
+        p {
+          font-size: 8px;
+          line-height: 10px;
+        }
+
+        img {
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    .reg-button {
+      margin-top: 6px;
+      margin-left: 25%;
+      width: 192px;
+      height: 40px;
+
+      &:hover {
+        background-position: 192px;
+      }
+    }
+  }
+
+  .certificate {
+    text-align: left;
+
+    hr {
+      display: none;
+    }
+
+    h1 {
+      padding-left: 15px;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer {
+    &__phone {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 140px;
+
+      a {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        color: #212121;
+        text-decoration: none;
+      }
+    }
+
+    &__car-icon {
+      bottom: 110px;
+      right: 15px;
+      width: 111px;
+    }
+
+    &__logo {
+      margin-top: 12px;
+
+      .logo {
+        width: 16px;
+      }
+
+      .logo-label {
+        font-size: 12px;
+      }
+
+    }
+
+    &__links {
+      flex-wrap: wrap;
+      font-size: 8px;
+      line-height: 20px;
+      width: 320px;
+
+      li {
+        padding-left: 8px;
+
+        &:nth-child(4) {
+          list-style-type: none;
+        }
+      }
+
+      ::marker {
+        font-size: 8px;
+      }
+    }
+
+    &__info {
+      display: none;
+    }
+
+    &__copyright {
+      font-size: 6px;
+      line-height: 10px;
+      padding-bottom: 15px;
+    }
+  }
+
+  #top {
+    background: none;
+  }
+
+  #mobile-top {
+    background: url(../images/bg-header-mobile.png) no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+  }
+
+  #documents {
+    margin: 0 18px 22px 18px;
+    border: 1px solid #F2F2F2;
+    box-sizing: border-box;
+    border-radius: 14px;
+    background: url(../images/bg-reqdoc.png) no-repeat;
+    background-size: cover;
+  }
+
+  #categories {
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    background: none;
+  }
+
+  #features {
+    border-bottom: 1px solid #EDEDED;
+    background: none;
   }
 }

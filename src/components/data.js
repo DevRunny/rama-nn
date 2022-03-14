@@ -7,8 +7,6 @@ import rulesIcon from "../images/icons/rules.svg";
 import qualificationIcon from "../images/icons/qualification.svg";
 import doc1 from "../images/files/doc1.png";
 import doc2 from "../images/files/doc2.png";
-import doc3 from "../images/files/doc3.png";
-import doc4 from "../images/files/doc4.png";
 
 export const information = {
   inn: "260505110827",
@@ -85,7 +83,7 @@ export const categories = [
     id: 1,
     image: (
       <img
-        src={motoIcon}
+        src={ motoIcon }
         className="vehicle-categories__icons"
         alt="moto-icon"
       />
@@ -96,7 +94,7 @@ export const categories = [
   {
     id: 2,
     image: (
-      <img src={carIcon} className="vehicle-categories__icons" alt="car-icon" />
+      <img src={ carIcon } className="vehicle-categories__icons" alt="car-icon" />
     ),
     header: "M1",
     text: "Транспортные средства, используемые для перевозки пассажиров и имеющие,помимо места водителя,не более восьми мест для сидения",
@@ -105,7 +103,7 @@ export const categories = [
     id: 3,
     image: (
       <img
-        src={truckIcon}
+        src={ truckIcon }
         className="vehicle-categories__icons"
         alt="truck-icon"
       />
@@ -118,28 +116,28 @@ export const categories = [
 export const features = [
   {
     id: 1,
-    image: <img src={lawIcon} alt="law-icon"/>,
+    image: <img src={ lawIcon } alt="law-icon" />,
     header: "Соблюдаем Закон РФ",
     text: "Федеральный закон о техническом осмотре транспортных средств можно посмотреть ",
     href: "#",
   },
   {
     id: 2,
-    image: <img src={contractIcon} alt="contract-icon"/>,
+    image: <img src={ contractIcon } alt="contract-icon" />,
     header: "Оформляем официально",
     text: "Посмотреть форму договора можно ",
     href: "#",
   },
   {
     id: 3,
-    image: <img src={rulesIcon} alt="rules-icon"/>,
+    image: <img src={ rulesIcon } alt="rules-icon" />,
     header: "Действуем согласно правилам",
     text: "Посмотреть текст правил технического осмотра ТС можно ",
     href: "#",
   },
   {
     id: 4,
-    image: <img src={qualificationIcon} alt="qualification-icon"/>,
+    image: <img src={ qualificationIcon } alt="qualification-icon" />,
     header: "Имеем квалификацию",
     text: "Посмотреть Сертификат сотрудника линии ТО можно ",
     href: "#",
@@ -149,18 +147,10 @@ export const features = [
 export const documents = [
   {
     id: 1,
-    image: <img src={doc1} alt="doc1" />,
+    image: <img src={ doc1 } alt="doc1" />,
   },
   {
     id: 2,
-    image: <img src={doc2} alt="doc2" />,
-  },
-  {
-    id: 3,
-    image: <img src={doc3} alt="doc3" />,
-  },
-  {
-    id: 4,
-    image: <img src={doc4} alt="doc4" />,
+    image: <img src={ doc2 } alt="doc2" />,
   },
 ];
