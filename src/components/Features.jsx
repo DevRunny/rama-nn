@@ -7,18 +7,18 @@ export const Features = () => {
       <div className="container">
         <div className="features-list">
           <ul>
-            {features.map((feature) => {
+            { features.map((feature) => {
               return (
-                <li key={feature.id}>
-                  {feature.image}
-                  <h1>{feature.header}</h1>
+                <li key={ feature.id }>
+                  { feature.image }
+                  <h1>{ feature.header }</h1>
                   <p>
-                    {feature.text}
-                    <a href={feature.href}>здесь</a>
+                    { feature.text }
+                    <a href={ feature.href }>здесь</a>
                   </p>
                 </li>
               );
-            })}
+            }) }
           </ul>
         </div>
       </div>

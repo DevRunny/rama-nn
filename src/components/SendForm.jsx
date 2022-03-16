@@ -2,42 +2,42 @@ import React, { useState, useEffect } from "react";
 import person from "../images/icons/person.svg";
 
 export const SendForm = () => {
-  const [fio, setFio] = useState("");
-  const [phone, setPhone] = useState("");
-  const [model, setModel] = useState("");
-  const [gosNumber, setGosNumber] = useState("");
-  const [vin, setVin] = useState("");
-  const [date, setDate] = useState("");
-  const [checkbox, setCheckbox] = useState("");
+  const [ fio, setFio ] = useState("");
+  const [ phone, setPhone ] = useState("");
+  const [ model, setModel ] = useState("");
+  const [ gosNumber, setGosNumber ] = useState("");
+  const [ vin, setVin ] = useState("");
+  const [ date, setDate ] = useState("");
+  const [ checkbox, setCheckbox ] = useState("");
 
-  const [fioDirty, setFioDirty] = useState(false);
-  const [phoneDirty, setPhoneDirty] = useState(false);
-  const [modelDirty, setModelDirty] = useState(false);
-  const [gosNumberDirty, setGosNumberDirty] = useState(false);
-  const [vinDirty, setVinDirty] = useState(false);
-  const [dateDirty, setDateDirty] = useState(false);
+  const [ fioDirty, setFioDirty ] = useState(false);
+  const [ phoneDirty, setPhoneDirty ] = useState(false);
+  const [ modelDirty, setModelDirty ] = useState(false);
+  const [ gosNumberDirty, setGosNumberDirty ] = useState(false);
+  const [ vinDirty, setVinDirty ] = useState(false);
+  const [ dateDirty, setDateDirty ] = useState(false);
 
-  const [fioError, setFioError] = useState("Заполните ФИО");
-  const [phoneError, setPhoneError] = useState("Заполните номер телефона");
-  const [modelError, setModelError] = useState("Заполните марку и модель ТС");
-  const [gosNumberError, setGosNumberError] = useState(
+  const [ fioError, setFioError ] = useState("Заполните ФИО");
+  const [ phoneError, setPhoneError ] = useState("Заполните номер телефона");
+  const [ modelError, setModelError ] = useState("Заполните марку и модель ТС");
+  const [ gosNumberError, setGosNumberError ] = useState(
     "Заполните регистрационный знак"
   );
-  const [vinError, setVinError] = useState("Заполните VIN номер ТС");
-  const [dateError, setDateError] = useState("Укажите дату");
-  const [checkboxError, setCheckboxError] = useState(
+  const [ vinError, setVinError ] = useState("Заполните VIN номер ТС");
+  const [ dateError, setDateError ] = useState("Укажите дату");
+  const [ checkboxError, setCheckboxError ] = useState(
     "Необходимо согласиться с условиями"
   );
 
-  const [formValid, setFormValid] = useState(false);
-  const [submitValue, setSubmitValue] = useState("");
+  const [ formValid, setFormValid ] = useState(false);
+  const [ submitValue, setSubmitValue ] = useState("");
 
-  const [fioValid, setFioValid] = useState("");
-  const [phoneValid, setPhoneValid] = useState("");
-  const [modelValid, setModelValid] = useState("");
-  const [gosNumberValid, setGosNumberValid] = useState("");
-  const [vinValid, setVinValid] = useState("");
-  const [dateValid, setDateValid] = useState("");
+  const [ fioValid, setFioValid ] = useState("");
+  const [ phoneValid, setPhoneValid ] = useState("");
+  const [ modelValid, setModelValid ] = useState("");
+  const [ gosNumberValid, setGosNumberValid ] = useState("");
+  const [ vinValid, setVinValid ] = useState("");
+  const [ dateValid, setDateValid ] = useState("");
 
   const classInput = "send-form__input";
   const classValidInput = " valid";
@@ -187,23 +187,23 @@ export const SendForm = () => {
     <div className="send-form">
       <div className="send-form__title">
         <img
-          src={person}
+          src={ person }
           alt="person"
-          style={{ width: "32px", height: "32px" }}
+          style={ { width: "32px", height: "32px" } }
         />
         <h1>Заявка на прохождение ТО</h1>
       </div>
       <hr />
       <form>
         <label>ФИО Владельца ТС:</label>
-        {fioDirty && fioError && (
-          <div className={classErrorInput}>{fioError}</div>
-        )}
+        { fioDirty && fioError && (
+          <div className={ classErrorInput }>{ fioError }</div>
+        ) }
         <input
-          onChange={(e) => fioHandler(e)}
-          value={fio}
-          onBlur={(e) => blurHandler(e)}
-          className={classInput + fioValid}
+          onChange={ (e) => fioHandler(e) }
+          value={ fio }
+          onBlur={ (e) => blurHandler(e) }
+          className={ classInput + fioValid }
           name="fio"
           type="text"
           placeholder="Иванов Иван Иванович"
@@ -211,14 +211,14 @@ export const SendForm = () => {
         />
 
         <label>Номер телефона для связи:</label>
-        {phoneDirty && phoneError && (
-          <div className={classErrorInput}>{phoneError}</div>
-        )}
+        { phoneDirty && phoneError && (
+          <div className={ classErrorInput }>{ phoneError }</div>
+        ) }
         <input
-          onChange={(e) => phoneHandler(e)}
-          value={phone}
-          onBlur={(e) => blurHandler(e)}
-          className={classInput + phoneValid}
+          onChange={ (e) => phoneHandler(e) }
+          value={ phone }
+          onBlur={ (e) => blurHandler(e) }
+          className={ classInput + phoneValid }
           name="phone"
           type="text"
           placeholder="+7 (000) 000-00-00"
@@ -226,14 +226,14 @@ export const SendForm = () => {
         />
 
         <label>Марка и модель ТС:</label>
-        {modelDirty && modelError && (
-          <div className={classErrorInput}>{modelError}</div>
-        )}
+        { modelDirty && modelError && (
+          <div className={ classErrorInput }>{ modelError }</div>
+        ) }
         <input
-          onChange={(e) => modelHandler(e)}
-          value={model}
-          onBlur={(e) => blurHandler(e)}
-          className={classInput + modelValid}
+          onChange={ (e) => modelHandler(e) }
+          value={ model }
+          onBlur={ (e) => blurHandler(e) }
+          className={ classInput + modelValid }
           name="model"
           type="text"
           placeholder="Chevrolet Niva"
@@ -241,14 +241,14 @@ export const SendForm = () => {
         />
 
         <label>Государственный регистрационный знак:</label>
-        {gosNumberDirty && gosNumberError && (
-          <div className={classErrorInput}>{gosNumberError}</div>
-        )}
+        { gosNumberDirty && gosNumberError && (
+          <div className={ classErrorInput }>{ gosNumberError }</div>
+        ) }
         <input
-          onChange={(e) => gosNumberHandler(e)}
-          value={gosNumber}
-          onBlur={(e) => blurHandler(e)}
-          className={classInput + gosNumberValid}
+          onChange={ (e) => gosNumberHandler(e) }
+          value={ gosNumber }
+          onBlur={ (e) => blurHandler(e) }
+          className={ classInput + gosNumberValid }
           name="gosnumber"
           type="text"
           placeholder="А 111 АА | 777"
@@ -256,14 +256,14 @@ export const SendForm = () => {
         />
 
         <label>VIN номер ТС:</label>
-        {vinDirty && vinError && (
-          <div className={classErrorInput}>{vinError}</div>
-        )}
+        { vinDirty && vinError && (
+          <div className={ classErrorInput }>{ vinError }</div>
+        ) }
         <input
-          onChange={(e) => vinHandler(e)}
-          value={vin}
-          onBlur={(e) => blurHandler(e)}
-          className={classInput + vinValid}
+          onChange={ (e) => vinHandler(e) }
+          value={ vin }
+          onBlur={ (e) => blurHandler(e) }
+          className={ classInput + vinValid }
           name="vin"
           type="text"
           placeholder="XTA123456Y1234567"
@@ -271,14 +271,14 @@ export const SendForm = () => {
         />
 
         <label>Дата и время прохождения ТО:</label>
-        {dateDirty && dateError && (
-          <div className={classErrorInput}>{dateError}</div>
-        )}
+        { dateDirty && dateError && (
+          <div className={ classErrorInput }>{ dateError }</div>
+        ) }
         <input
-          onChange={(e) => dateHandler(e)}
-          value={date}
-          onBlur={(e) => blurHandler(e)}
-          className={classInput + dateValid}
+          onChange={ (e) => dateHandler(e) }
+          value={ date }
+          onBlur={ (e) => blurHandler(e) }
+          className={ classInput + dateValid }
           name="date"
           type="datetime-local"
           required
@@ -288,16 +288,16 @@ export const SendForm = () => {
           Дополнительная информация:<p> (не обязательно)</p>
         </label>
         <input
-          className={classInput}
+          className={ classInput }
           name="comment"
           type="text"
           placeholder="Ваш комментарий"
         />
-        {<div className={classErrorInput}>{checkboxError}</div>}
-        <label className="send-form__checkbox-label">
+        { <div className={ classErrorInput }>{ checkboxError }</div> }
+        <label className="checkbox">
           <input
-            onChange={(e) => checkboxHandler(e)}
-            value={checkbox}
+            onChange={ (e) => checkboxHandler(e) }
+            value={ checkbox }
             className="send-form__checkbox"
             type="checkbox"
             required
@@ -308,8 +308,8 @@ export const SendForm = () => {
         <input
           className="send-form__submit"
           type="submit"
-          disabled={!formValid}
-          value={submitValue}
+          disabled={ !formValid }
+          value={ submitValue }
         />
       </form>
       <hr />

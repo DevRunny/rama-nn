@@ -61,9 +61,10 @@ header {
   cursor: pointer;
   background: $btnColor;
   transition: background 0.3s ease-out;
+  outline: none;
 
   &:hover {
-    background-position: 279px;
+    opacity: 0.9;
   }
 }
 
@@ -600,6 +601,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     padding-bottom: 20px;
   }
 
@@ -671,7 +673,7 @@ header {
 }
 
 .modal-image {
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   height: 90%;
@@ -695,6 +697,10 @@ header {
     background: #fff;
     cursor: pointer;
     z-index: 25;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   @keyframes modal-image {
@@ -708,7 +714,7 @@ header {
 }
 
 .send-form {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -735,7 +741,7 @@ header {
   }
 
   &__title {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -758,20 +764,16 @@ header {
     box-sizing: border-box;
     border-radius: 8px;
     width: 100%;
-    height: 2rem;
+    height: 35px;
     padding-left: 12px;
     margin-bottom: 25px;
+    outline: none;
   }
 
   &__checkbox {
     margin-right: 5px;
   }
 
-  .send-form__checkbox-label {
-    font-size: 10px;
-    line-height: 12px;
-    margin-bottom: 25px;
-  }
 
   &__submit {
     width: 178px;
@@ -813,6 +815,12 @@ header {
       background: url(../images/icons/checked.svg) no-repeat 98%;
     }
 
+    .checkbox {
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 25px;
+    }
+
     p {
       display: flex;
       align-items: center;
@@ -838,7 +846,7 @@ header {
 }
 
 .modal-content {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -847,10 +855,9 @@ header {
 
   #modal__close-btn {
     position: absolute;
-    top: 60px;
-    left: 250px;
+    top: 70px;
+    right: 20px;
     height: 32px;
-    width: 32px;
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
