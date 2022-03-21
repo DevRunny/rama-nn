@@ -358,14 +358,24 @@
     }
 
     &__error {
-      font-size: 0.6em;
-      color: red;
+      position: relative;
+      margin-left: 10%;
     }
 
-    label {
+    &__field-name {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      font-size: 11px;
+      line-height: 12px;
+
       p {
         display: none;
       }
+    }
+
+    &__checkbox:last-child {
+      color: darkblue;
     }
   }
 

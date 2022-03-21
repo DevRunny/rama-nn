@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useOpenModal = () => {
-  const [openItem, setOpenItem] = useState(null);
+  const [ openItem, setOpenItem ] = useState(null);
 
   useEffect(() => {
     if (!openItem) {
@@ -9,7 +9,7 @@ export const useOpenModal = () => {
     } else {
       document.body.style.overflow = "hidden";
     }
-  });
+  }, [ openItem ]);
 
   return { openItem, setOpenItem };
 };

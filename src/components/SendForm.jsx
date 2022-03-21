@@ -40,8 +40,9 @@ export const SendForm = () => {
   const [ dateValid, setDateValid ] = useState("");
 
   const classInput = "send-form__input";
+  const classInputError = "send-form__input-error";
   const classValidInput = " valid";
-  const classErrorInput = "send-form__error";
+  const classError = "send-form__error";
 
   useEffect(() => {
     if (
@@ -195,96 +196,102 @@ export const SendForm = () => {
       </div>
       <hr />
       <form>
-        <label>ФИО Владельца ТС:</label>
-        { fioDirty && fioError && (
-          <div className={ classErrorInput }>{ fioError }</div>
-        ) }
+        <label className="send-form__field-name">ФИО Владельца ТС:
+          { fioDirty && fioError && (
+            <div className={ classError }>{ fioError }</div>
+          ) }
+        </label>
         <input
           onChange={ (e) => fioHandler(e) }
           value={ fio }
           onBlur={ (e) => blurHandler(e) }
-          className={ classInput + fioValid }
+          className={ fioDirty && fioError ? classInputError : classInput + fioValid }
           name="fio"
           type="text"
           placeholder="Иванов Иван Иванович"
           required
         />
 
-        <label>Номер телефона для связи:</label>
-        { phoneDirty && phoneError && (
-          <div className={ classErrorInput }>{ phoneError }</div>
-        ) }
+        <label className="send-form__field-name">Номер телефона для связи:
+          { phoneDirty && phoneError && (
+            <div className={ classError }>{ phoneError }</div>
+          ) }
+        </label>
         <input
           onChange={ (e) => phoneHandler(e) }
           value={ phone }
           onBlur={ (e) => blurHandler(e) }
-          className={ classInput + phoneValid }
+          className={ phoneDirty && phoneError ? classInputError : classInput + phoneValid }
           name="phone"
           type="text"
           placeholder="+7 (000) 000-00-00"
           required
         />
 
-        <label>Марка и модель ТС:</label>
-        { modelDirty && modelError && (
-          <div className={ classErrorInput }>{ modelError }</div>
-        ) }
+        <label className="send-form__field-name">Марка и модель ТС:
+          { modelDirty && modelError && (
+            <div className={ classError }>{ modelError }</div>
+          ) }
+        </label>
         <input
           onChange={ (e) => modelHandler(e) }
           value={ model }
           onBlur={ (e) => blurHandler(e) }
-          className={ classInput + modelValid }
+          className={ modelDirty && modelError ? classInputError : classInput + modelValid }
           name="model"
           type="text"
           placeholder="Chevrolet Niva"
           required
         />
 
-        <label>Государственный регистрационный знак:</label>
-        { gosNumberDirty && gosNumberError && (
-          <div className={ classErrorInput }>{ gosNumberError }</div>
-        ) }
+        <label className="send-form__field-name">Государственный регистрационный знак:
+          { gosNumberDirty && gosNumberError && (
+            <div className={ classError }>{ gosNumberError }</div>
+          ) }
+        </label>
         <input
           onChange={ (e) => gosNumberHandler(e) }
           value={ gosNumber }
           onBlur={ (e) => blurHandler(e) }
-          className={ classInput + gosNumberValid }
+          className={ gosNumberDirty && gosNumberError ? classInputError : classInput + gosNumberValid }
           name="gosnumber"
           type="text"
           placeholder="А 111 АА | 777"
           required
         />
 
-        <label>VIN номер ТС:</label>
-        { vinDirty && vinError && (
-          <div className={ classErrorInput }>{ vinError }</div>
-        ) }
+        <label className="send-form__field-name">VIN номер ТС:
+          { vinDirty && vinError && (
+            <div className={ classError }>{ vinError }</div>
+          ) }
+        </label>
         <input
           onChange={ (e) => vinHandler(e) }
           value={ vin }
           onBlur={ (e) => blurHandler(e) }
-          className={ classInput + vinValid }
+          className={ vinDirty && vinError ? classInputError : classInput + vinValid }
           name="vin"
           type="text"
           placeholder="XTA123456Y1234567"
           required
         />
 
-        <label>Дата и время прохождения ТО:</label>
-        { dateDirty && dateError && (
-          <div className={ classErrorInput }>{ dateError }</div>
-        ) }
+        <label className="send-form__field-name">Дата и время прохождения ТО:
+          { dateDirty && dateError && (
+            <div className={ classError }>{ dateError }</div>
+          ) }
+        </label>
         <input
           onChange={ (e) => dateHandler(e) }
           value={ date }
           onBlur={ (e) => blurHandler(e) }
-          className={ classInput + dateValid }
+          className={ dateDirty && dateError ? classInputError : classInput + dateValid }
           name="date"
           type="datetime-local"
           required
         />
 
-        <label>
+        <label className="send-form__field-name">
           Дополнительная информация:<p> (не обязательно)</p>
         </label>
         <input
@@ -293,8 +300,7 @@ export const SendForm = () => {
           type="text"
           placeholder="Ваш комментарий"
         />
-        { <div className={ classErrorInput }>{ checkboxError }</div> }
-        <label className="checkbox">
+        <label className="send-form__checkbox">
           <input
             onChange={ (e) => checkboxHandler(e) }
             value={ checkbox }
@@ -302,8 +308,10 @@ export const SendForm = () => {
             type="checkbox"
             required
           />
-          Я соглашаюсь на обработу персональных данных
+          Я соглашаюсь на обработку персональных данных
+          { <div className={ classError }>{ checkboxError }</div> }
         </label>
+
 
         <input
           className="send-form__submit"
