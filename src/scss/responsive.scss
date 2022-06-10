@@ -260,29 +260,14 @@
   }
 
   .header-info {
+    &__name {
+      font-size: 20px;
+      line-height: 24px;
+    }
 
     &__requisites {
-      line-height: 10px;
-
-      span:nth-child(2) {
-        padding-left: 16px;
-      }
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 25px;
-      line-height: 25px;
-    }
-
-    h3 {
-      font-size: 12px;
-      line-height: 25px;
-    }
-
-
-    span {
-      font-size: 12px;
+      gap: 5px;
+      font-size: 10.5px;
     }
   }
 
@@ -431,6 +416,16 @@
 }
 
 @media (max-width: 475px) {
+
+  .header-logo-mobile {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 0;
+  }
+
   .header-info {
     display: flex;
     align-items: center;
@@ -438,16 +433,6 @@
     color: #141414;
     text-shadow: none;
     padding-bottom: 25px;
-
-    h1 {
-      margin-top: 170px;
-      margin-bottom: 8px;
-      width: 281px;
-      font-size: $h1SizeMobile;
-      text-align: center;
-      line-height: 22px;
-      white-space: nowrap;
-    }
 
     h3 {
       margin-bottom: 8px;
@@ -457,14 +442,23 @@
       line-height: 15px;
     }
 
-    &__requisites {
-      line-height: 15px;
+    &__name {
+      padding-top: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
 
-      span {
-        &:nth-child(2) {
-          padding-left: 15.7px;
-        }
-      }
+    &__requisites {
+      align-items: center;
+    }
+
+    &__inn {
+      display: flex;
+      gap: 5px;
+    }
+    &__ogrn {
+      display: flex;
+      gap: 5px;
     }
   }
 
@@ -635,7 +629,7 @@
       display: block;
       position: absolute;
       left: 0;
-      bottom: 162px;
+      bottom: 229px;
 
       a {
         font-weight: 700;
@@ -646,24 +640,13 @@
       }
     }
 
-    &__car-icon {
-      bottom: 130px;
-      right: 15px;
-      width: 111px;
-    }
-
     &__logo {
       margin-top: 6px;
 
-      .logo {
-        margin-top: 10px;
-        width: 25px;
+      .logo-footer {
+        padding-top: 10px;
+        width: 80px;
       }
-
-      .logo-label {
-        font-size: 20px;
-      }
-
     }
 
     &__links {
@@ -708,12 +691,6 @@
 
   #top {
     background: none;
-  }
-
-  #mobile-top {
-    background: url(../images/bg-header-mobile.png) no-repeat;
-    background-size: cover;
-    background-clip: border-box;
   }
 
   #documents {

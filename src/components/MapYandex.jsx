@@ -2,14 +2,7 @@ import React from "react";
 import { information } from "./Data";
 import mapIcon from "../images/icons/mapicon.svg";
 import mappoint from "../images/icons/mappoint.svg";
-import {
-  YMaps,
-  Map,
-  Placemark,
-  TrafficControl,
-  ZoomControl,
-  TypeSelector,
-} from "react-yandex-maps";
+import { Map, Placemark, TrafficControl, TypeSelector, YMaps, ZoomControl, } from "react-yandex-maps";
 import { RegButton } from "./RegButton";
 
 const mapData = {
@@ -74,11 +67,16 @@ export const MapYandex = ({ setOpenItem }) => {
                 iconLayout: "default#image",
                 iconImageHref: mappoint,
                 iconImageSize: [ 43.09, 57.69 ],
-                iconImageOffset: [ -20, -55 ],
-                balloonOffset: [ 3, -40 ],
+                iconImageOffset: [ -18, -58 ],
                 hideIconOnBalloonOpen: true,
                 openBalloonOnClick: true,
               } }
+              properties={{
+                hintContent: `ИП: ${information.name}`,
+                balloonContent: `<b>ИП: ${information.name}</b>
+                  <br />${information.address}`
+              }}
+              modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
             />
           )) }
           <TrafficControl options={ { position: { top: 80, right: 10 } } } />

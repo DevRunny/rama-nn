@@ -1,6 +1,5 @@
 import logo from "../images/icons/logo.svg";
-import { links } from "./Data";
-import { information } from "./Data";
+import { information, links } from "./Data";
 import mappoint from "../images/icons/mappoint.svg";
 import burgerMenu from "../images/icons/burgermenu.svg";
 import closeBurger from "../images/icons/closeburger.svg";
@@ -17,7 +16,6 @@ export const Navbar = ({ openMenu, setOpenMenu }) => {
       <nav className="navbar">
         <a className="navbar__logo" href="/">
           <img src={logo} className="logo" alt="logo" />
-          <label className="logo-label">{information.label}</label>
         </a>
         <div className="navbar__links">
           {links.map((link) => {

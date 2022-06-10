@@ -9,17 +9,16 @@ import doc1 from "../images/files/doc1.png";
 import doc2 from "../images/files/doc2.png";
 
 export const information = {
-  inn: "260505110827",
-  ogrn: "307264213100022",
-  numberRSA: "01234",
-  name: "Хафизов Рамиль Наилевич",
-  address: "Московское шоссе, 302а к1",
-  fullAddress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а к1`,
+  inn: "525610085089",
+  ogrn: "322527500063547",
+  numberRSA: "00000",
+  name: "Богатырь Кирилл Александрович",
+  address: "Московское шоссе, 302а",
+  fullAddress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а`,
   tel: "+7 (904) 399-14-50",
   hrefTel: "tel:+79043991450",
-  email: "rama-nn@mail.ru",
-  hrefEmail: "mailto:rama-nn@mail.ru",
-  label: "RAMA-NN",
+  email: "sto-bogatyr@mail.ru",
+  hrefEmail: "mailto:sto-bogatyr@mail.ru",
 };
 
 export const links = [
@@ -40,11 +39,6 @@ export const links = [
   },
   {
     id: 4,
-    text: "Запись на ТО",
-    href: "#reg-button",
-  },
-  {
-    id: 5,
     text: "Аттестат",
     href: "#certificate",
   },

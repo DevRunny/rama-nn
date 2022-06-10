@@ -69,15 +69,7 @@ header {
 }
 
 .logo {
-  margin-top: 20px;
-  margin-right: 7px;
-}
-
-.logo-label {
-  white-space: nowrap;
-  font-family: "Jockey One", serif;
-  font-size: 40px;
-  color: #ff3d00;
+  width: 80px;
 }
 
 .mappoint {
@@ -225,24 +217,20 @@ header {
   }
 }
 
+.header-logo-mobile {
+  display: none;
+}
+
 .header-info {
   display: flex;
   flex-direction: column;
+  gap: 15px;
   padding-bottom: 220px;
   font-style: normal;
   text-align: left;
   color: #ffffff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: 660px;
-
-  h1 {
-    margin-top: 46px;
-    margin-bottom: 68px;
-    width: 630px;
-    height: 48px;
-    font-size: 40px;
-    line-height: 48px;
-  }
+  width: 800px;
 
   h3 {
     font-weight: 200;
@@ -250,34 +238,34 @@ header {
     line-height: 29px;
   }
 
+  &__name {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   &__requisites {
-    font-weight: 300;
-    font-size: 20.5px;
-    line-height: 29px;
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 200;
+    font-size: 21px;
 
-
-    span {
+    b {
       font-weight: 300;
-
-      &:first-child {
-        margin-left: 0;
-        font-weight: 400;
-      }
-
-      &:nth-child(2) {
-        padding-left: 20px;
-      }
-
-      &:nth-child(5) {
-        padding-left: 10px;
-      }
-
-      &:nth-child(4) {
-        margin-left: 0;
-        font-weight: 400;
-      }
     }
+  }
+
+  &__inn {
+    display: flex;
+    gap: 15px;
+  }
+  &__ogrn {
+    display: flex;
+    gap: 5px;
   }
 }
 
@@ -527,7 +515,6 @@ header {
       color: #000000;
     }
 
-
     hr {
       width: 308px;
       height: 0;
@@ -590,19 +577,16 @@ header {
     display: none;
   }
 
-  &__car-icon {
-    position: absolute;
-    bottom: 135px;
-    right: 70px;
-    width: 351px;
-  }
-
   &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     padding-bottom: 20px;
+
+    .logo-footer {
+      width: 135px;
+    }
   }
 
   &__links {
@@ -815,7 +799,6 @@ header {
     color: red;
   }
 
-
   &__field-name {
     display: flex;
     align-items: center;
@@ -934,10 +917,10 @@ header {
 
 #accreditations {
   background: linear-gradient(
-          89.06deg,
-          #ffffff 0.77%,
-          rgba(255, 255, 255, 0.46875) 52.38%,
-          rgba(196, 196, 196, 0) 97.91%
+    89.06deg,
+    #ffffff 0.77%,
+    rgba(255, 255, 255, 0.46875) 52.38%,
+    rgba(196, 196, 196, 0) 97.91%
   );
 }
 

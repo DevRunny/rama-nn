@@ -1,22 +1,18 @@
 import React from "react";
-import { information } from "./Data";
-import { footerLinks } from "./Data";
+import { footerLinks, information } from "./Data";
 import logo from "../images/icons/logo.svg";
-import footerCar from "../images/icons/footercar.svg";
 
 export const Footer = () => {
   return (
     <footer>
       <div id="footer">
         <div className="footer">
-          <img src={ footerCar } className="footer__car-icon" alt="" />
           <span className="footer__phone">
                 <a href={ information.hrefTel }>{ information.tel }</a>
           </span>
           <div className="container">
             <div className="footer__logo">
-              <img src={ logo } className="logo" alt="logo" />
-              <label className="logo-label">{ information.label }</label>
+              <img src={ logo } className="logo-footer" alt="logo" />
             </div>
             <div className="footer__links">
               { footerLinks.map((link) => {
