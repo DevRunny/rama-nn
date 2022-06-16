@@ -263,6 +263,7 @@ header {
     display: flex;
     gap: 15px;
   }
+
   &__ogrn {
     display: flex;
     gap: 5px;
@@ -407,7 +408,7 @@ header {
     h3 {
       margin-top: 11px;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 13px;
       line-height: 19px;
     }
   }
@@ -917,10 +918,10 @@ header {
 
 #accreditations {
   background: linear-gradient(
-    89.06deg,
-    #ffffff 0.77%,
-    rgba(255, 255, 255, 0.46875) 52.38%,
-    rgba(196, 196, 196, 0) 97.91%
+          89.06deg,
+          #ffffff 0.77%,
+          rgba(255, 255, 255, 0.46875) 52.38%,
+          rgba(196, 196, 196, 0) 97.91%
   );
 }
 

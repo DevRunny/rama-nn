@@ -1,6 +1,7 @@
 import motoIcon from "../images/icons/moto.svg";
 import carIcon from "../images/icons/car.svg";
 import truckIcon from "../images/icons/truck.svg";
+import trailerIcon from "../images/icons/trailer.svg";
 import lawIcon from "../images/icons/law.svg";
 import contractIcon from "../images/icons/contract.svg";
 import rulesIcon from "../images/icons/rules.svg";
@@ -15,8 +16,8 @@ export const information = {
   name: "Богатырь Кирилл Александрович",
   address: "Московское шоссе, 302а",
   fullAddress: `603092, Нижегородская область, г. Нижний Новгород, Московское шоссе, 302а`,
-  tel: "+7 (904) 399-14-50",
-  hrefTel: "tel:+79043991450",
+  tel: "+7 (910) 896-55-50",
+  hrefTel: "tel:+79108965505",
   email: "sto-bogatyr@mail.ru",
   hrefEmail: "mailto:sto-bogatyr@mail.ru",
 };
@@ -104,6 +105,30 @@ export const categories = [
     ),
     header: "N1",
     text: "Транспортные средства, предназначенные для перевозки грузов, имеющие технически допустимую максимальную массу не более 3,5 тонн.",
+  },
+  {
+    id: 4,
+    image: (
+      <img
+        src={ trailerIcon }
+        className="vehicle-categories__icons"
+        alt="trailer-icon"
+      />
+    ),
+    header: "O1",
+    text: "Прицепы, технически допустимая максимальная масса которых не более 0,75 тонн.",
+  },
+  {
+    id: 5,
+    image: (
+      <img
+        src={ trailerIcon }
+        className="vehicle-categories__icons"
+        alt="trailer-icon"
+      />
+    ),
+    header: "O2",
+    text: "Прицепы, технически допустимая максимальная масса которых свыше 0,75 т, но не более 3,5 тонн.",
   },
 ];
 

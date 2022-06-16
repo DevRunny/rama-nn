@@ -74,6 +74,15 @@
     padding-bottom: 55px;
   }
 
+  .vehicle-categories {
+    ul {
+      h3 {
+        font-size: 8px;
+        line-height: 13px;
+      }
+    }
+  }
+
   .features-list {
     ul {
       li {
@@ -94,6 +103,15 @@
 }
 
 @media (max-width: 1300px) {
+  .vehicle-categories {
+    ul {
+      h3 {
+        font-size: 8px;
+        line-height: 13px;
+      }
+    }
+  }
+
   .features-list {
     ul {
       li {
@@ -456,6 +474,7 @@
       display: flex;
       gap: 5px;
     }
+
     &__ogrn {
       display: flex;
       gap: 5px;
